@@ -1,0 +1,44 @@
+
+.panel-4col { 
+/*  overflow: hidden;  */
+}
+
+.panel-4col .panel-col-first { 
+  float: left; 
+  width: 25%; 
+}
+
+.panel-4col .panel-col-first .inside { 
+  margin: 0 .5em 1em 0;
+}
+
+.panel-4col .panel-col-midleft { 
+  float: left; 
+  width: 25%; 
+}
+
+.panel-4col .panel-col-midleft .inside { 
+  margin: 0 .5em 1em .5em;
+}
+
+.panel-4col .panel-col-midright { 
+  float: left; 
+  width: 25%; 
+}
+
+.panel-4col .panel-col-midright .inside { 
+  margin: 0 .5em 1em .5em;
+}
+
+.panel-4col .panel-col-last { 
+  float: left; 
+  width: 25%; 
+}
+
+.panel-4col .panel-col-last .inside { 
+  margin: 0 0 1em .5em;
+}
+
+.panel-4col .panel-separator {
+  margin: 0 0 1em 0;
+}

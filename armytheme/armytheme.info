@@ -1,0 +1,53 @@
+name = ArmyTheme
+description = Custom theme for Army website
+core = 7.x
+base theme = bootstrap
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+
+regions[navigation]     = 'Navigation'
+regions[mobile_header]  = 'Mobile header'
+regions[top] 			= 'Page top'
+regions[header] 		= 'Header'
+regions[highlighted]    = 'Highlighted'
+regions[help]           = 'Help'
+regions[featured] 		= 'Featured'
+regions[content]        = 'Content'
+regions[sidebar_first]  = 'Primary sidebar'
+regions[sidebar_second] = 'Secondary sidebar'
+regions[footer]         = 'Footer'
+regions[bottom]    		= 'Page bottom'
+
+; Panels layouts. You can place multiple layouts under the "layouts" folder.
+plugins[panels][layouts] = layouts
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Stylesheets
+;;;;;;;;;;;;;;;;;;;;;
+
+stylesheets[all][] = css/styles.min.css
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Scripts
+;;;;;;;;;;;;;;;;;;;;;
+
+scripts[] = 'js/bootstrap/affix.js'
+scripts[] = 'js/bootstrap/alert.js'
+scripts[] = 'js/bootstrap/button.js'
+scripts[] = 'js/bootstrap/collapse.js'
+scripts[] = 'js/bootstrap/dropdown.js'
+scripts[] = 'js/bootstrap/modal.js'
+scripts[] = 'js/bootstrap/tooltip.js'
+scripts[] = 'js/bootstrap/popover.js'
+scripts[] = 'js/bootstrap/scrollspy.js'
+scripts[] = 'js/bootstrap/tab.js'
+scripts[] = 'js/bootstrap/transition.js'
+scripts[] = 'js/common.min.js'
+
+
+; Disable BootstrapCDN so the compiled LESS source files can be used.
+settings[bootstrap_cdn] = ''
