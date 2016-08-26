@@ -3,13 +3,13 @@
 function armytheme_preprocess_page(&$vars, $hook)
 {
     if ($vars['is_front']) {
-      drupal_add_js(drupal_get_path('theme', 'armytheme') . '/js/slick.min.js');
+      drupal_add_js(drupal_get_path('theme', 'armytheme') . '/dist/js/slick.min.js');
     }
 }
 
 function armytheme_js_alter(&$javascript) {
     $javascript['misc/jquery.js']['data'] = drupal_get_path('theme', 'armytheme') .
-    '/js/jquery-1.12.4.min.js';
+    '/dist/js/jquery-1.12.4.min.js';
     $javascript['misc/jquery.js']['version'] = '1.7.2';
 }
 
