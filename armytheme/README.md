@@ -1,6 +1,6 @@
 # Army Theme
 
-Custom theme for the Australia Army to be used in the GovCMS Drupal distribution.
+Custom theme for the Australian Army to be used in the GovCMS Drupal distribution.
 
 
 ## Credits
