@@ -30,13 +30,11 @@ plugins[panels][layouts] = layouts
 
 stylesheets[all][] = dist/css/styles.min.css
 
-
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Scripts
 ;;;;;;;;;;;;;;;;;;;;;
 
 scripts[] = 'dist/js/scripts.min.js'
-scripts[] = 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'
 
 ; Disable BootstrapCDN so the compiled LESS source files can be used.
 settings[bootstrap_cdn] = ''

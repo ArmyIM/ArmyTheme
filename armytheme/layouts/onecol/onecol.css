@@ -1,14 +1,14 @@
 
-.panel-1col {
+#page-manager-edit .panel-1col {
 /*  overflow: hidden;  */
 }
 
-.panel-2col .panel-col-first .inside {
+#page-manager-edit .panel-2col .panel-col-first .inside {
   margin: 0;
 }
 
 
-.panel-1col .panel-col {
+#page-manager-edit .panel-1col .panel-col {
   width: 100%;
 }
 
@@ -17,6 +17,6 @@
   margin: .5em;
 }
 
-.panel-2col .panel-separator {
+#page-manager-edit .panel-2col .panel-separator {
   margin: 0 0 1em 0;
 }
