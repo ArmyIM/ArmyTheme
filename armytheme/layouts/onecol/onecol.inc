@@ -1,11 +1,14 @@
 <?php
 
+/**
+ * implementation of hook_panels_layouts()
+ */
 // Plugin definition
 $plugin = array(
   'title' => t('Single column'),
   'category' => t('Columns: 1'),
   'icon' => 'onecol.png',
-  'theme' => 'onecol.css.min',
-  'css' => 'onecol.css.min',
+  'theme' => 'panels_onecol',
+  'css' => 'onecol.css',
   'regions' => array('middle' => t('Middle column')),
 );
