@@ -9,6 +9,6 @@ $plugin = array(
   'category' => t('Columns: 1'),
   'icon' => 'onecol.png',
   'theme' => 'panels_onecol',
-  'css' => 'onecol.css',
+  'css' => '/dist/css/panels.css.min',
   'regions' => array('middle' => t('Middle column')),
 );

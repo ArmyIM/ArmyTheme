@@ -10,7 +10,6 @@ function armytheme_preprocess_page(&$vars, $hook)
     if ($vars['is_front']) {
       drupal_add_js(drupal_get_path('theme', 'armytheme') . '/dist/js/slick.min.js');
     }
-
 }
 
 
