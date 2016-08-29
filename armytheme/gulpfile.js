@@ -8,10 +8,7 @@ var gulp = require('gulp'),
     });
 
 gulp.task('default', ['watch']);
-
-
 gulp.task('server', ['serve', 'watch']);
-
 
 gulp.task('squish-jquery', function () {
     return gulp.src('src/js/libs/**/*.js')
@@ -36,6 +33,7 @@ gulp.task('combine-js', function () {
         .pipe(plugins.concat('scripts.min.js'))
         .pipe(gulp.dest('dist/js'));
 });
+
 
 gulp.task('minify-css', function () {
     return gulp.src('src/css/*.less')
@@ -63,6 +61,7 @@ gulp.task('minify-css', function () {
         .pipe(plugins.rename({ suffix: '.min' }))
         .pipe(gulp.dest('dist/css')).on('error', gutil.log);
 });
+
 
 // Default task
 gulp.task('watch', function () {
