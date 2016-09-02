@@ -1,6 +1,5 @@
 // Mixins
 // --------------------------------------------------
-
 // Utilities
 @import "mixins/hide-text.less";
 @import "mixins/opacity.less";
@@ -15,7 +14,6 @@
 @import "mixins/text-emphasis.less";
 @import "mixins/text-overflow.less";
 @import "mixins/vendor-prefixes.less";
-
 // Components
 @import "mixins/alerts.less";
 @import "mixins/buttons.less";
@@ -26,15 +24,63 @@
 @import "mixins/forms.less";
 @import "mixins/progress-bar.less";
 @import "mixins/table-row.less";
-
 // Skins
 @import "mixins/background-variant.less";
 @import "mixins/border-radius.less";
 @import "mixins/gradients.less";
-
 // Layout
 @import "mixins/clearfix.less";
 @import "mixins/center-block.less";
 @import "mixins/nav-vertical-align.less";
 @import "mixins/grid-framework.less";
 @import "mixins/grid.less";
+.wordwrap() {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+.link-hover() {
+    font-weight: bold;
+    background:none;
+    &:hover,
+    &:focus,
+    &.current {
+        color: @brand-red;
+        background:none;
+    }
+}
+
+.link-hover-border() {
+    font-weight: bold;
+    border-bottom: 1px dotted @brand-black;background:none;
+    &:hover,
+    &:focus,
+    &.current {
+        color: @brand-red;
+        border-bottom: 1px dotted @brand-red;   background:none;
+    }
+}
+
+.border-radius (@radius: 3px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+
+.fade-hover() {
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+    border:0;
+    &:hover,
+    &:focus {
+        opacity: 0.8;  border:0;
+    }
+}

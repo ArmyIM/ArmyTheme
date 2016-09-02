@@ -3,8 +3,8 @@ function ds_bootstrap_2col () {
   return array(
     'label' => t('Bootstrap 2 Column'),
     'regions' => array(
-	  'left' => t('Main content'),
-   	  'right' => t('Side content'),
+	  'left' => t('Left content'),
+   	  'right' => t('Right content'),
      ),
 
     'image' => TRUE,
