@@ -25,7 +25,7 @@
       </span>
     </button>
     <a id="logo-mobile" href="index.php">
-      <span class="sr-only">Australian Army logo</span>
+    <img src="<?php print $logo; ?>" alt="Australian Army" />
     </a>
     <div id="top-nav">               
       <?php print render($page['top']); ?>
@@ -33,7 +33,7 @@
 
     <?php if ($logo): ?>
     <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-      <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+      <img src="<?php print $logo; ?>" alt="Australian Army" />
     </a>
     <?php endif; ?>
 
@@ -58,18 +58,16 @@
 <div class="body-wrap">
   <div class="content-container <?php print $container_class; ?>" id="container">
     <?php print $breadcrumb; ?>
-    <div class="row">
-      <div class="col-xs-12">
+    
+      
         <?php print render($title_suffix); ?>
+        
         <?php if (!empty($messages)): ?>
-        <div class="col-xs-12">
           <?php print $messages; ?>
-        </div>
         <?php endif; ?>
+        
         <?php if (!empty($tabs)): ?>
-        <div class="col-xs-12">
           <?php print render($tabs); ?>
-        </div>
         <?php endif; ?>
 
         <?php if (!empty($page['sidebar_first'])): ?>
@@ -83,7 +81,7 @@
           <?php elseif (!empty($page['sidebar_first'])): ?>
           <div class="col-xs-12 col-sm-9 main-content">
             <?php else: ?>
-            <div class="col-xs-12 col-sm-12 main-content"> 
+            <div class="main-content"> 
           <?php endif; ?>
 
               <a id="main-content"></a>
@@ -117,13 +115,18 @@
 
           </div>
         </div>
-      </div>
-    </div>
+     
+
+    
   </div>
   <?php if (!empty($page['footer'])): ?>
   <footer class="footer <?php print $container_class; ?>">
     <?php print render($page['footer']); ?>
   </footer>
+  <?php endif; ?>
+
+  <?php if (!empty($page['bottom'])): ?>
+    <?php print render($page['bottom']); ?>
   <?php endif; ?>
 
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57c9545832e949a6"></script>
