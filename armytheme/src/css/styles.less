@@ -490,8 +490,6 @@ body {
     }
 }
 
-
-
 .footer {
     background: #000;
     .make-xs-column(12);
@@ -618,14 +616,15 @@ body {
             }
         }
     }
-    .view-latest-news {
-        a {
-            display: block;
-            .link-hover();
-        }
-        article {
-            margin-bottom: 15px
-        }
+}
+
+.view-latest-news {
+    a {
+        display: block;
+        .link-hover();
+    }
+    article {
+        margin-bottom: 15px
     }
 }
 
@@ -763,7 +762,7 @@ span.label-above {
     p {
         color: #1c1c1c;
         font-weight: bold;
-        font-size: 15.6px;
+        font-size: 16px;
         line-height: 21.45px;
         margin-top: 0;
         margin-bottom: 21.45px;
@@ -814,9 +813,10 @@ span.label-above {
     h2,
     h3 {
         color: #fff;
-        margin-bottom: 15px;
+        margin: 0 0 15px 0;
+        border:0!important;
+        padding:0;
     }
-    // .pane-title {font-size:@font-size-h3}
     span,
     p,
     a {
@@ -964,6 +964,15 @@ span.label-above {
                 }
             }
         }
+    }
+}
+
+.layout-2col {
+    .panel-col-left {
+        .make-xs-column(8);
+    }
+    .panel-col-right {
+        .make-xs-column(4);
     }
 }
 
@@ -1193,7 +1202,6 @@ p.tags {
             &.active-trail {
                 color: #000;
                 font-weight: bold;
-                
             }
             &.active-trail.active {
                 color: white;
@@ -1205,9 +1213,7 @@ p.tags {
             display: block;
             margin: 0;
             border-bottom: 1px solid @brand-gray;
-
             &.active-trail.expanded {
-
                 background: url("img/nav-bg.png") repeat @brand-gray-light;
             }
             &.menu-mlid-1527 {
@@ -1225,6 +1231,9 @@ p.tags {
                         &.active-trail.active {
                             font-weight: normal;
                         }
+                    }
+                    &.last {
+                        border: 0;
                     }
                 }
             }
@@ -1257,25 +1266,28 @@ p.tags {
     }
 }
 
-.item-list {
+.aside-list {
     ol {
         .clearfix;
         .list-unstyled;
+        margin: 0;
     }
     li {
-        .make-xs-column(12);
-        padding: 0;
-        margin-top: 30px;
-        &:first-child {
-            margin-top: 0;
+        display: block;
+        margin: 15px 0 0 0;
+        padding: 0 0 15px 0;
+        border-bottom: 1px solid @brand-gray-light;
+        &:hover,
+        &:focus {
+            a,
+            span {
+                color: @brand-red;
+            }
         }
     }
-    .teaser-desc {
-        float: left;
-        .make-xs-column(9);
-        .make-sm-column(8)
-    }
-    &.frontpage {
+ 
+
+    &.blog-list-items {
         .img-thumb {
             .make-xs-column(12);
             .make-sm-column(3);
@@ -1292,6 +1304,35 @@ p.tags {
                 .link-hover();
             }
         }
+    }
+    &.news-list-items {
+        .date-display-single {
+            display: block;
+        }
+        a {
+            display: block;
+        }
+    }
+}
+
+.item-list {
+    ol {
+        .clearfix;
+        .list-unstyled;
+        margin: 0;
+    }
+    li {
+        .make-xs-column(12);
+        padding: 0;
+        margin-top: 30px;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    .teaser-desc {
+        float: left;
+        .make-xs-column(9);
+        .make-sm-column(8)
     }
 }
 
@@ -1366,7 +1407,7 @@ p.tags {
 }
 
 .region-bottom {
-    clear:both;
+    clear: both;
     .container;
     .menu-block-wrapper {
         float: right
@@ -1383,7 +1424,7 @@ p.tags {
             padding: 0;
             font-size: 12px;
             text-transform: uppercase;
-            display:inline;
+            display: inline;
             font-weight: bold;
             &:hover,
             &:focus {
@@ -1392,10 +1433,10 @@ p.tags {
             }
         }
         li + li:before {
-             content: '\2022';
-            color:#fff;
-            padding:5px;
-             margin-right: 0.5em;
+            content: '\2022';
+            color: #fff;
+            padding: 5px;
+            margin-right: 0.5em;
         }
     }
 }
