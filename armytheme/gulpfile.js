@@ -1,14 +1,21 @@
 // Load Gulp
-var gulp = require('gulp'),
-    gutil = require('gulp-util'),
-    plugins = require('gulp-load-plugins')({
-        rename: {
-            'gulp-live-server': 'serve'
-        }
+var gulp = require('gulp');
+var gutil = require('gulp-util');
+var plugins = require('gulp-load-plugins')();
+
+var bs = require('browser-sync').create();
+
+gulp.task('browser-sync', function() {
+   bs.init({
+    server: {
+        baseDir: "./"
+    },
+    proxy: "localhost:8083",
+    ws: true 
     });
+});
 
 gulp.task('default', ['watch']);
-gulp.task('server', ['serve', 'watch']);
 
 gulp.task('squish-jquery', function () {
     return gulp.src('src/js/libs/**/*.js')
@@ -32,6 +39,7 @@ gulp.task('combine-js', function () {
         }))
         .pipe(plugins.concat('scripts.min.js'))
         .pipe(gulp.dest('dist/js'));
+        .pipe(bs.reload({stream: true})); 
 });
 
 
@@ -60,20 +68,13 @@ gulp.task('minify-css', function () {
         .pipe(plugins.cssmin())
         .pipe(plugins.rename({ suffix: '.min' }))
         .pipe(gulp.dest('dist/css')).on('error', gutil.log);
+        .pipe(bs.reload({stream: true})); 
 });
 
 
-// Default task
-gulp.task('watch', function () {
+gulp.task('watch', ['browser-sync'], function () {
     gulp.watch('src/js/libs/**/*.js', ['squish-jquery']);
     gulp.watch('src/js/*.js', ['combine-js']);
     gulp.watch('src/css/*.less', ['minify-css']);
-});
-
-gulp.task('serve', function () {
-    var server = plugins.serve.static('/', 8083);
-    server.start();
-    gulp.watch(['dist/*'], function (file) {
-        server.notify.apply(server, [file]);
-    });
+    gulp.watch("*.php").on('change', bs.reload);
 });
