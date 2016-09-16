@@ -7,5 +7,6 @@ function ds_article_1col () {
      ),
 
     'image' => TRUE,
+     'form' => TRUE,
       );
 }

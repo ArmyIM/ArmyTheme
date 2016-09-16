@@ -1,0 +1,6 @@
+name = Shiny Subtheme
+description = Overrides for the Shiny administration theme.
+core = 7.x
+base theme = shiny
+
+stylesheets[all][] = css/custom.css

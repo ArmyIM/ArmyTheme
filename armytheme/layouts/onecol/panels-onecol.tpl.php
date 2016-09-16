@@ -12,8 +12,8 @@
  *   $content['middle']: The only panel in the layout.
  */
 ?>
-<div class="panel-display panel-1col clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
-  <div class="panel-panel panel-col">
+<div class="panels panel-1col clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
+  <div class="col-xs-12">
     <?php print $content['middle']; ?>
   </div>
 </div>

@@ -9,26 +9,28 @@
  */
 ?>
 
-<div class="row panel-4col" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
-  <div class="col-xs-12 col-sm-3 first">
-    <div class="inside"><?php print $content['left']; ?></div>
+<div class="panels panel-4col clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
+  <div class="left-col">
+   <?php print $content['left']; ?>
   </div>
 
-  <div class="col-xs-12 col-sm-3">
-    <div class="inside"><?php print $content['midleft']; ?></div>
+  <div class="midleft-col">
+   <?php print $content['midleft']; ?>
   </div>
   
-  <div class="col-xs-12 col-sm-3">
-    <div class="inside"><?php print $content['midright']; ?></div>
+  <div class="midright-col">
+   <?php print $content['midright']; ?>
   </div>
 
-  <div class="col-xs-12 col-sm-3 last">
-    <div class="inside"><?php print $content['right']; ?></div>
+  <div class="right-col">
+  <div class="inside">
+   <?php print $content['right']; ?>
+   </div>
   </div>
 
 <?php if (!empty($content['bottom'])): ?>
-   <div class="col-xs-12">
-    <div class="inside"><?php print $content['bottom']; ?></div>
+   <div class="bottom-col">
+ <?php print $content['bottom']; ?>
   </div>
    <?php endif; ?>
 </div>

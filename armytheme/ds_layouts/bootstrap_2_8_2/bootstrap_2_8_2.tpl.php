@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Bootstrap 1 column template for Display Suite.
+ * Bootstrap 2-8-2 template for Display Suite.
  */
 ?>
 
@@ -11,9 +11,15 @@
     <?php print render($title_suffix['contextual_links']); ?>
   <?php endif; ?>
   <div class="row">
-    <<?php print $central_wrapper; ?> class="col-sm-12 <?php print $central_classes; ?>">
+    <<?php print $left_wrapper; ?> class="col-sm-2 <?php print $left_classes; ?>">
+      <?php print $left; ?>
+    </<?php print $left_wrapper; ?>>
+    <<?php print $central_wrapper; ?> class="col-sm-8 <?php print $central_classes; ?>">
       <?php print $central; ?>
     </<?php print $central_wrapper; ?>>
+    <<?php print $right_wrapper; ?> class="col-sm-2 <?php print $right_classes; ?>">
+      <?php print $right; ?>
+    </<?php print $right_wrapper; ?>>
   </div>
 </<?php print $layout_wrapper ?>>
 

@@ -8,5 +8,6 @@ function ds_bootstrap_2col () {
      ),
 
     'image' => TRUE,
+     'form' => TRUE,
       );
 }

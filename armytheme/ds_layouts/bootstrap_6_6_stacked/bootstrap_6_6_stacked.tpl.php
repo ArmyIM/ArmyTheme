@@ -6,11 +6,12 @@
  */
 ?>
 
-
 <?php print $top; ?>
 <?php if (!empty($drupal_render_children)): ?>
-  <div class="col-xs-12">
+  <div class="top-col">
+  <div class="inside">
   <?php print $drupal_render_children ?>
+  </div>
   </div>
 <?php endif; ?>
 
@@ -34,7 +35,9 @@
 
 <?php print $bottom; ?>
 <?php if (!empty($drupal_render_children)): ?>
-  <div class="col-xs-12">
+  <div class="bottom-col">
+  <div class="inside">
   <?php print $drupal_render_children ?>
+  </div>
   </div>
 <?php endif; ?>

@@ -9,7 +9,15 @@
  *
  * @ingroup templates
  */
+
+
+ $Boolclass = NULL;
+ if (isset($node->field_override_with_own_side_con[LANGUAGE_NONE][0]['value']) && $node->field_override_with_own_side_con[LANGUAGE_NONE][0]['value'] == 1 ) :
+        $Boolclass = 'hide-global-sidecontent';
+ endif;
+
 ?>
+
 
 <nav class="pushy pushy-left">
   <?php print render($page['mobile_header']); ?>
@@ -45,6 +53,9 @@
   </div>
 </div>
 
+
+<div class="body-wrap">
+
 <?php if (drupal_is_front_page() && !empty($page['highlighted'])) {?>
   <?php print render($page['highlighted']); ?>
 <?php }?>
@@ -55,8 +66,9 @@
   </div>
 <?php }?>
 
-<div class="body-wrap">
-  <div class="content-container <?php print $container_class; ?>" id="container">
+
+
+  <div class="content-container <?php print $Boolclass;?> <?php print $container_class; ?>" id="container">
     <?php print $breadcrumb; ?>
     
       
@@ -129,5 +141,7 @@
     <?php print render($page['bottom']); ?>
   <?php endif; ?>
 
+
+<a href="#0" class="scroll-to-top"> <div class='scroll icon'><i class="fa fa-4x fa-angle-up"></i></div></a>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57c9545832e949a6"></script>
 

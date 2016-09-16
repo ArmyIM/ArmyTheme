@@ -14,12 +14,12 @@
  *   - $content['right']: Content in the right column.
  */
 ?>
-<div class="panel-2col row clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
-  <div class="panel-col-left">
+<div class="panels panel-2col clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
+  <div class="left-col">
    <?php print $content['left']; ?>
   </div>
 
-  <div class="panel-col-right">
+  <div class="right-col">
    <?php print $content['right']; ?>
   </div>
 </div>

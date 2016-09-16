@@ -1,23 +1,25 @@
-  <div class="<?php print $classes ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
+  <div class="row panel-2col-stacked clearfix <?php print $classes ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
   <?php if (!empty($content['top'])): ?>
-  <div class="row">
+  <div class="top-col">
     <?php print $content['top']; ?>
   </div>
   <?php endif; ?>
 
 
-  <div class="row">
-    <div class="panel-col-left">
+
+    <div class="left-col">
     <?php print $content['left']; ?>
     </div>
-    <div class="panel-col-right">
+    <div class="right-col">
     <?php print $content['right']; ?>
     </div>
-  </div>
+
 
   <?php if (!empty($content['bottom'])): ?>
-  <div class="row">
+  <div class="bottom-col">
+  <div class="inside">
     <?php print $content['bottom']; ?>
+    </div>
   </div>
  <?php endif; ?>
  </div>

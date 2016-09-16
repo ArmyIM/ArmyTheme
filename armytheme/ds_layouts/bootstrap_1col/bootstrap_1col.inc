@@ -7,5 +7,6 @@ function ds_bootstrap_1col () {
      ),
 
     'image' => TRUE,
+     'form' => TRUE,
       );
 }

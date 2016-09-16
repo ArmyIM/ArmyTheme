@@ -51,10 +51,10 @@
             position: absolute;
             background:@caption-bg;
             color: #fff;
-            padding: @grid-padding;
+            padding: calc(@grid-padding * 2);
             width: 60%;
             left: 0;
-            bottom: 0;
+            bottom: 25px;
             h1 {
                 margin: 0 0 15px 0;
                 color: #fff;
@@ -367,14 +367,14 @@
 }
 
 .slick-dots {
-    position: absolute;
-    bottom: 5px;
+  //  position: absolute;
+  //  bottom: 5px;
     list-style: none;
-    display: block;
+  //  display: block;
     text-align: right;
     padding: 0;
     margin: 0;
-    width: 85%;
+
     li {
         position: relative;
         display: inline-block;
