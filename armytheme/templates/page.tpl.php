@@ -27,6 +27,8 @@
 
 <div id="header" role="banner" class="header push">
   <div class="container <?php print $container_class; ?>">
+
+  <div class="mobile-header visible-xs">
     <button class="hamburger pushy-link" type="button">
       <span class="hamburger-box">
         <span class="hamburger-inner"></span>
@@ -35,6 +37,7 @@
     <a id="logo-mobile" href="index.php">
     <img src="<?php print $logo; ?>" alt="Australian Army" />
     </a>
+  </div>
     <div id="top-nav">               
       <?php print render($page['top']); ?>
     </div>

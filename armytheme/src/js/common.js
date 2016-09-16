@@ -1,4 +1,5 @@
 jQuery(document).ready(function($){
+    
 
     var offset = 300,
     offset_opacity = 1200,

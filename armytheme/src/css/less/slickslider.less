@@ -18,8 +18,7 @@
 @slick-opacity-default: 1;
 @slick-opacity-on-hover: 1;
 @slick-opacity-not-active: 0.3;
-@caption-bg:@black;
-
+@caption-bg: @black;
 .slick-slider {
     position: relative;
     display: block;
@@ -39,6 +38,7 @@
         width: 100%;
         margin: auto;
         left: 0;
+        bottom: 0;
         .container {
             position: relative;
             .slick-height();
@@ -49,12 +49,15 @@
             position: relative;
             min-height: 1px;
             position: absolute;
-            background:@caption-bg;
+            background: @caption-bg;
             color: #fff;
             padding: calc(@grid-padding * 2);
             width: 60%;
             left: 0;
             bottom: 25px;
+            @media (max-width: @screen-md-min) {
+                bottom: 0;
+            }
             h1 {
                 margin: 0 0 15px 0;
                 color: #fff;
@@ -75,7 +78,7 @@
             p {
                 //font-size: 16px;
                 //font-weight: bold;
-                margin:0;
+                margin: 0;
             }
             @media (max-width: @screen-sm) {
                 width: 100%;
@@ -334,6 +337,9 @@
     @media (max-width: @screen-sm) {
         top: 30%
     }
+    @media (min-width: @screen-md-min) {
+        display: none!important;
+    }
 }
 
 .slick-prev:before,
@@ -367,14 +373,13 @@
 }
 
 .slick-dots {
-  //  position: absolute;
-  //  bottom: 5px;
+    //  position: absolute;
+    //  bottom: 5px;
     list-style: none;
-  //  display: block;
+    //  display: block;
     text-align: right;
     padding: 0;
     margin: 0;
-
     li {
         position: relative;
         display: inline-block;

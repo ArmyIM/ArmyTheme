@@ -72,7 +72,6 @@
 @import "less/fontawesome/stacked.less";
 @import "less/fontawesome/icons.less";
 //  @import "less/fontawesome/screen-reader.less";
-//S@import "less/contextual.less";
 @h1-mobile: 26px;
 html,
 body {
@@ -88,18 +87,6 @@ body {
 
 body {
     position: relative;
-    &.fixed {
-        #header {
-            position: fixed;
-        }
-        #dimmer {
-            padding-top: 110px;
-            background-color: #000;
-            > div {
-                opacity: 0.2;
-            }
-        }
-    }
     &.grid-layout {}
     &.front {
         #dots-nav {
@@ -107,6 +94,9 @@ body {
             position: relative;
             top: -60px;
             text-align: right;
+            @media (max-width: @screen-md-min) {
+                display: none;
+            }
             .slick-dots {
                 display: inline-block;
             }
@@ -217,11 +207,18 @@ body {
     }
     .front & {
         .make-xs-column(12);
-        padding-right: 0;
         background: #fff;
         margin-top: -50px;
-        .right-col {
+        @media (min-width: @screen-md-min) {
             padding-right: 0;
+        }
+        @media (max-width: @screen-md-min) {
+            margin-top: 0;
+        }
+        .right-col {
+            @media (min-width: @screen-md-min) {
+                padding-right: 0;
+            }
             .inside {
                 .widget-dark;
                 padding: 0;
@@ -335,8 +332,6 @@ body {
     background: @black;
     border-bottom: 5px solid @brand-red;
     position: relative;
-    z-index: 20000;
-    width: 100%;
     min-height: 50px;
     @media (max-width: @screen-xs-max) {
         border-bottom: none;
@@ -344,13 +339,16 @@ body {
     .container {
         text-align: right;
         position: relative;
-        padding: 0!important;
         @media (max-width: @screen-xs-max) {
-            text-align: left;
+            padding: 0;
         }
-        @media (max-width: @screen-md-max) {
-            width: 100%!important;
+        @media (min-width: @screen-lg-min) {
+            width: 100%;
+            padding: 0;
         }
+    }
+    .mobile-header {
+        text-align: left;
     }
     #logo-mobile {
         position: relative;
@@ -360,9 +358,6 @@ body {
         position: absolute;
         left: 0;
         top: 6px;
-        @media (min-width: @screen-xs-max) {
-            display: none;
-        }
         img {
             width: 130px
         }
@@ -563,7 +558,9 @@ body {
     .container;
     .clearfix();
     background: @white;
-    padding: 0 0 15px 0;
+    @media (min-width: @screen-md-min) {
+        padding: 0 0 15px 0;
+    }
     .page-node& {
         padding: 0 0 100px 0;
     }
@@ -1375,9 +1372,8 @@ p.tags {
 
 .aside-list {
     padding: 15px;
-
-     @media (max-width: @screen-md-min) {
-        padding:10px;
+    @media (max-width: @screen-md-min) {
+        padding: 10px;
     }
     h2 {
         margin: 5px 0;
@@ -1613,9 +1609,6 @@ p.tags {
     //    height: 96px;
     width: @mobile-nav-height;
     height: @mobile-nav-height;
-    @media (min-width: @screen-xs-max) {
-        display: none;
-    }
     .hamburger-box {
         width: 100%;
         height: 24px;
@@ -2056,3 +2049,5 @@ body.pushy-open-left .hamburger {
     background-color: #e86256;
     opacity: 1;
 }
+
+@import "less/contextual.less";
