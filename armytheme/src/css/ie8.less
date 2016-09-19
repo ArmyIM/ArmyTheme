@@ -1,0 +1,395 @@
+@grid-padding: @grid-gutter-width/2;
+// Core variables and mixins
+@import "less/variables.less";
+@import "less/mixins.less";
+html.lt-ie8 {
+    font-size: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    a {
+        zoom: 1;
+        cursor: pointer;
+    }
+    .row {
+        margin-left: -10px;
+        margin-right: -10px
+    }
+    .container {
+        max-width: none !important;
+        width: @screen-lg;
+        zoom: 1;
+    }
+    .col-xs-1,
+    .col-xs-10,
+    .col-xs-11,
+    .col-xs-12,
+    .col-xs-2,
+    .col-xs-3,
+    .col-xs-4,
+    .col-xs-5,
+    .col-xs-6,
+    .col-xs-7,
+    .col-xs-8,
+    .col-xs-9 {
+        position: relative;
+        min-height: 1px;
+        padding-left: 10px;
+        padding-right: 10px;
+        float: left
+    }
+    .col-xs-12 {
+        width: 100%
+    }
+    .col-xs-11 {
+        width: 91.66666667%
+    }
+    .col-xs-10 {
+        width: 83.33333333%
+    }
+    .col-xs-9 {
+        width: 75%
+    }
+    .col-xs-8 {
+        width: 66.66666667%
+    }
+    .col-xs-7 {
+        width: 58.33333333%
+    }
+    .col-xs-6 {
+        width: 50%
+    }
+    .col-xs-5 {
+        width: 41.66666667%
+    }
+    .col-xs-4 {
+        width: 33.33333333%
+    }
+    .col-xs-3 {
+        width: 25%
+    }
+    .col-xs-2 {
+        width: 16.66666667%
+    }
+    .col-xs-1 {
+        width: 8.33333333%
+    }
+}
+
+.make-row(@gutter: @grid-gutter-width) {
+    margin-left: ceil((@gutter / -2));
+    margin-right: floor((@gutter / -2));
+    &:extend(.clearfix all);
+}
+
+// Generate the extra small columns
+.make-xs-column(@columns;
+@gutter: @grid-gutter-width) {
+    position: relative;
+    float: left;
+    width: percentage((@columns / @grid-columns));
+    min-height: 1px;
+    padding-left: (@gutter / 2);
+    padding-right: (@gutter / 2);
+}
+
+html.lt-ie8 input[type="text"],
+html.lt-ie8 input[type="password"],
+html.lt-ie8 input[type="email"],
+html.lt-ie8 input[type="number"] {
+    padding-top: 6px;
+    padding-left: 10px;
+}
+
+html.lt-ie8 input[type="text"].input-lg,
+html.lt-ie8 input[type="password"].input-lg,
+html.lt-ie8 input[type="email"].input-lg {
+    padding-top: 6px;
+    padding-left: 10px;
+}
+
+html.lt-ie8 input[type="text"].input-sm,
+html.lt-ie8 input[type="password"].input-sm,
+html.lt-ie8 input[type="email"].input-sm {
+    padding-top: 4px;
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+html.lt-ie8 .btn-block {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+html.lt-ie8 .btn-group {
+    margin-left: .3em;
+    display: inline;
+    zoom: 1;
+}
+
+html.lt-ie8 .btn-group > .btn,
+html.lt-ie8 .btn-group-vertical > .btn {
+    position: relative;
+}
+
+html.lt-ie8 .btn-group > .btn + .btn,
+html.lt-ie8 .btn-group-vertical > .btn + .btn {
+    margin-left: -1px !important;
+}
+
+html.lt-ie8 .form-control {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    line-height: 1.2;
+    height: auto;
+}
+
+html.lt-ie8 .form-inline input[type="text"],
+html.lt-ie8 .form-inline input[type="password"],
+html.lt-ie8 .form-inline input[type="email"] {
+    width: 150px;
+    padding: 6px 5px;
+}
+
+html.lt-ie8 .form-inline .radio,
+html.lt-ie8 .form-inline .checkbox,
+html.lt-ie8 .form-inline .radio input[type="radio"],
+html.lt-ie8 .form-inline .checkbox input[type="checkbox"] {
+    margin-right: 3px;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+html.lt-ie8 .form-inline .radio,
+html.lt-ie8 .form-inline .checkbox {
+    padding-top: 6px;
+}
+
+html.lt-ie8 .navbar-form .btn {
+    font-size: 13px;
+    line-height: 1.2;
+}
+
+html.lt-ie8 .navbar-form,
+html.lt-ie8 .form-inline,
+html.lt-ie8 .form-inline input,
+html.lt-ie8 .form-horizontal input,
+html.lt-ie8 .form-inline textarea,
+html.lt-ie8 .form-horizontal textarea,
+html.lt-ie8 .form-inline select,
+html.lt-ie8 .form-horizontal select,
+html.lt-ie8 .form-inline .uneditable-input,
+html.lt-ie8 .form-horizontal .uneditable-input,
+html.lt-ie8 .form-inline .input-prepend,
+html.lt-ie8 .form-horizontal .input-prepend,
+html.lt-ie8 .form-inline .input-append,
+html.lt-ie8 .form-horizontal .input-append {
+    margin-bottom: 0;
+    display: inline;
+    zoom: 1;
+}
+
+html.lt-ie8 .sr-only {
+    clip: rect(0 0 0 0);
+}
+
+html.lt-ie8 table {
+    border-collapse: collapse !important;
+}
+
+html.lt-ie8 .input-group {
+    white-space: nowrap;
+    vertical-align: middle;
+    position: relative;
+    zoom: 1;
+}
+
+html.lt-ie8 .input-group span.input-group-addon {
+    left: 0;
+}
+
+html.lt-ie8 .input-group span.input-group-addon + input {
+    margin-left: -4px;
+}
+
+html.lt-ie8 .input-group input {
+    vertical-align: middle;
+}
+
+html.lt-ie8 .input-group .input-group-addon {
+    width: auto;
+    min-width: 16px;
+    height: 22px !important;
+    padding: 5px 5px;
+    font-size: 14px;
+    line-height: 20px;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+    display: inline;
+    zoom: 1;
+}
+
+html.lt-ie8 .input-group input,
+html.lt-ie8 .input-group select {
+    float: none;
+}
+
+html.lt-ie8 .input-group-addon {
+    left: -5px;
+}
+
+html.lt-ie8 .input-group-addon:first-child {
+    left: 4px;
+}
+
+html.lt-ie8 .input-group-btn {
+    display: inline;
+}
+
+html.lt-ie8 li .value .input-group-btn button,
+html.lt-ie8 tr.answer .input-group-btn button {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding-bottom: 5px;
+    border-left: 0;
+}
+
+html.lt-ie8 input,
+html.lt-ie8 button,
+html.lt-ie8 select,
+html.lt-ie8 textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+html.lt-ie8 input[type=submit],
+html.lt-ie8 input[type=button],
+html.lt-ie8 input[type=reset],
+html.lt-ie8 button {
+    filter: chroma(color=#000000);
+}
+
+html.lt-ie8 .fa-ul {
+    list-style: disc !important;
+}
+
+html.lt-ie8 .alert,
+html.lt-ie8 .progress,
+html.lt-ie8 .progress-bar,
+html.lt-ie8 .clearfix,
+html.lt-ie8 .dropdown,
+html.lt-ie8 .btn-toolbar,
+html.lt-ie8 .nav,
+html.lt-ie8 .navbar-header,
+html.lt-ie8 .form-group,
+html.lt-ie8 .jumbotron,
+html.lt-ie8 .list-group,
+html.lt-ie8 .panel,
+html.lt-ie8 .panel-heading,
+html.lt-ie8 .panel-body,
+html.lt-ie8 .panel-footer,
+html.lt-ie8 .well,
+html.lt-ie8 .tab-content,
+html.lt-ie8 .tab-pane,
+html.lt-ie8 .carousel,
+html.lt-ie8 .carousel-inner,
+html.lt-ie8 .carousel-control,
+html.lt-ie8 ul,
+html.lt-ie8 ol,
+html.lt-ie8 li,
+html.lt-ie8 form,
+html.lt-ie8 button,
+html.lt-ie8 input,
+html.lt-ie8 select,
+html.lt-ie8 hr,
+html.lt-ie8 textarea,
+html.lt-ie8 table,
+html.lt-ie8 tbody,
+html.lt-ie8 table td,
+html.lt-ie8 table th,
+html.lt-ie8 table col,
+html.lt-ie8 textarea {
+    zoom: 1;
+}
+
+html.lt-ie8 audio,
+html.lt-ie8 canvas,
+html.lt-ie8 video,
+html.lt-ie8 span,
+html.lt-ie8 select,
+html.lt-ie8 input[type="text"],
+html.lt-ie8 input[type="password"],
+html.lt-ie8 input[type="datetime"],
+html.lt-ie8 input[type="datetime-local"],
+html.lt-ie8 input[type="date"],
+html.lt-ie8 input[type="month"],
+html.lt-ie8 input[type="time"],
+html.lt-ie8 input[type="week"],
+html.lt-ie8 input[type="number"],
+html.lt-ie8 input[type="email"],
+html.lt-ie8 input[type="url"],
+html.lt-ie8 input[type="search"],
+html.lt-ie8 input[type="tel"],
+html.lt-ie8 input[type="color"],
+html.lt-ie8 input.form-control,
+html.lt-ie8 .radio-inline,
+html.lt-ie8 .checkbox-inline,
+html.lt-ie8 .img-thumbnail,
+html.lt-ie8 .list-inline > li,
+html.lt-ie8 .caret,
+html.lt-ie8 .form-inline textarea,
+html.lt-ie8 .form-horizontal textarea,
+html.lt-ie8 .form-inline .btn-group,
+html.lt-ie8 .btn,
+html.lt-ie8 .btn-group-vertical,
+html.lt-ie8 .collapse,
+html.lt-ie8 .nav-justified > li,
+html.lt-ie8 .breadcrumb > li,
+html.lt-ie8 .pagination,
+html.lt-ie8 .pagination > li,
+html.lt-ie8 .pagination > li > span,
+html.lt-ie8 .pager,
+html.lt-ie8 .pager li,
+html.lt-ie8 .pager li > a,
+html.lt-ie8 .pager li > span,
+html.lt-ie8 .badge,
+html.lt-ie8 .thumbnail,
+html.lt-ie8 .carousel-control .icon-prev,
+html.lt-ie8 .carousel-control .icon-next,
+html.lt-ie8 .carousel-control .glyphicon-chevron-left,
+html.lt-ie8 .carousel-control .glyphicon-chevron-right,
+html.lt-ie8 .carousel-indicators li,
+html.lt-ie8 .help-block {
+    display: inline;
+    zoom: 1;
+}
+
+.news {
+    li {
+        .make-xs-column(6);
+    }
+}
+
+.panel-4col {
+    .left-col,
+    .midleft-col,
+    .midright-col,
+    .right-col {
+        .make-xs-column(3);
+    }
+}
+
+
+
+.menu.nav {
+  
+  ul {
+
+    li {display:inline-block}
+  }
+}
+
+
+.region-footer {
+    > li {
+        .make-xs-column(2);
+    }
+}

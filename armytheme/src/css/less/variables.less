@@ -24,6 +24,7 @@
 
 
 @brand-links: 			@brand-red;
+@brand-links-hover:		darken(@brand-links,5%);
 @black:					#000;
 @white: 				#fff;
 
@@ -49,7 +50,7 @@
 
 @submenu-heading-color: @brand-red;
 @submenu-links-color: @brand-black;
-@submenu-bg-color:@brand-gray-light;
+@submenu-bg-color:none;
 
 @navbar-administration-bg: #383838;
 
@@ -96,9 +97,9 @@
 @text-color:            @gray-dark;
 
 //** Global textual link color.
-@link-color:            #200d0d;
+@link-color:            @brand-links;
 //** Link hover color set via `darken()` function.
-@link-hover-color:      darken(@link-color, 15%);
+@link-hover-color:      @brand-links-hover;
 //** Link hover decoration.
 @link-hover-decoration: none;
 
@@ -308,9 +309,9 @@
 @dropdown-divider-bg:            #e5e5e5;
 
 //** Dropdown link text color.
-@dropdown-link-color:            @gray-dark;
+@dropdown-link-color:              @brand-links;
 //** Hover color for dropdown links.
-@dropdown-link-hover-color:      darken(@gray-dark, 5%);
+@dropdown-link-hover-color:      darken(@brand-links, 5%);
 //** Hover background for dropdown links.
 @dropdown-link-hover-bg:         #f5f5f5;
 
@@ -431,21 +432,21 @@
 @navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
 @navbar-collapse-max-height:       340px;
 
-@navbar-default-color:             #777;
-@navbar-default-bg:                #f8f8f8;
-@navbar-default-border:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-color:              @brand-red;
+@navbar-default-bg:                none;
+@navbar-default-border:            none;
 
 // Navbar links
-@navbar-default-link-color:                #777;
-@navbar-default-link-hover-color:          #333;
+@navbar-default-link-color:                @brand-links;
+@navbar-default-link-hover-color:          @brand-links;
 @navbar-default-link-hover-bg:             transparent;
-@navbar-default-link-active-color:         #555;
-@navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-link-active-color:         @brand-links;
+@navbar-default-link-active-bg:            none;
 @navbar-default-link-disabled-color:       #ccc;
 @navbar-default-link-disabled-bg:          transparent;
 
 // Navbar brand label
-@navbar-default-brand-color:               @navbar-default-link-color;
+@navbar-default-brand-color:               @brand-links;
 @navbar-default-brand-hover-color:         darken(@navbar-default-brand-color, 10%);
 @navbar-default-brand-hover-bg:            transparent;
 
@@ -487,19 +488,19 @@
 
 //=== Shared nav styles
 @nav-link-padding:                          10px 15px;
-@nav-link-hover-bg:                         @gray-lighter;
+@nav-link-hover-bg:                         none;
 
-@nav-disabled-link-color:                   @gray-light;
-@nav-disabled-link-hover-color:             @gray-light;
+@nav-disabled-link-color:                   @brand-links;
+@nav-disabled-link-hover-color:             @brand-links;
 
 //== Tabs
 @nav-tabs-border-color:                     #ddd;
 
 @nav-tabs-link-hover-border-color:          @gray-lighter;
 
-@nav-tabs-active-link-hover-bg:             @brand-red;
+@nav-tabs-active-link-hover-bg:             @brand-links;
 @nav-tabs-active-link-hover-color:          #fff;
-@nav-tabs-active-link-hover-border-color:   @brand-red;
+@nav-tabs-active-link-hover-border-color:   @brand-links;
 
 @nav-tabs-justified-link-border-color:            #ddd;
 @nav-tabs-justified-active-link-border-color:     @brand-red;

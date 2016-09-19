@@ -22,5 +22,9 @@
     "gulp-uglify": "^1.1.0",
     "gulp-util": "^3.0.3",
     "jshint-stylish": "^1.0.0"
-  }
+  },
+
+  "scripts": {
+  "install": "echo 'https://www.drupal.org/node/2393605' > node_modules/.scanignore"
+}
 }
