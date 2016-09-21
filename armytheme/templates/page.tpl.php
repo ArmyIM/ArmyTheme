@@ -86,15 +86,15 @@
         <?php endif; ?>
 
         <?php if (!empty($page['sidebar_first'])): ?>
-        <aside id="secondary" class="aside col-sm-3" role="complementary">
+        <div id="secondary" class="aside" role="complementary">
           <?php print render($page['sidebar_first']); ?>
-        </aside>  
+        </div>  
         <?php endif; ?>
 
         <?php if (!empty($page['sidebar_second'])): ?>
-        <div class="col-xs-12 col-sm-6 main-content">
+        <div class="main-content has-sidebars">
           <?php elseif (!empty($page['sidebar_first'])): ?>
-          <div class="col-xs-12 col-sm-9 main-content">
+          <div class="main-content has-sidebar">
             <?php else: ?>
             <div class="main-content"> 
           <?php endif; ?>
@@ -123,9 +123,9 @@
               <?php print render($page['content']); ?>
             </div>
             <?php if (!empty($page['sidebar_second'])): ?>
-            <aside id="tertiary" class="aside" role="complementary">
+            <div id="tertiary" class="aside" role="complementary">
               <?php print render($page['sidebar_second']); ?>
-            </aside> 
+            </div> 
             <?php endif; ?>
 
           </div>
@@ -135,9 +135,9 @@
     
   </div>
   <?php if (!empty($page['footer'])): ?>
-  <footer class="footer <?php print $container_class; ?>">
+  <div class="footer">
     <?php print render($page['footer']); ?>
-  </footer>
+  </div>
   <?php endif; ?>
 
   <?php if (!empty($page['bottom'])): ?>
@@ -146,5 +146,3 @@
 
 
 <a href="#0" class="scroll-to-top"> <div class='scroll icon'><i class="fa fa-4x fa-angle-up"></i></div></a>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57c9545832e949a6"></script>
-

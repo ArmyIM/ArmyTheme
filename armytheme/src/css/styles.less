@@ -86,7 +86,6 @@ body {
     background: #f1f1f1;
 }
 
-
 body {
     position: relative;
     &.page-user-login,
@@ -135,6 +134,11 @@ body {
             display: block;
         }
         #container {
+            position:relative;
+             margin-top: -50px;
+             padding:0;
+
+
             .menu.nav,
             .featured-news {
                 .list-unstyled;
@@ -153,12 +157,13 @@ body {
                     }
                     h3 {
                         margin: 0 0 5px 0;
-                    }
+                    } 
                     a {
                         font-size: 14px;
                         padding: 0 20px 0 0;
                         border: 0;
                         .link-hover();
+                        color:@brand-black;
                         display: table-cell;
                         position: relative;
                         vertical-align: middle;
@@ -201,6 +206,7 @@ body {
     }
 }
 
+
 .menu {
     .clearfix;
     .list-unstyled;
@@ -225,11 +231,14 @@ body {
     .right-col {
         .make-xs-column(12);
         .make-sm-column(3);
+        .lt-ie8 & {
+            .make-xs-column(3);
+        }
     }
     .front & {
         .make-xs-column(12);
         background: #fff;
-        margin-top: -50px;
+       
         @media (min-width: @screen-sm-min) {
             padding-right: 0;
         }
@@ -246,13 +255,6 @@ body {
             }
         }
     }
-}
-
-.page-header {
-    padding-bottom: 5px;
-    margin: 15px 0;
-    border-bottom: 1px solid @page-header-border-color;
-    font-weight: bold;
 }
 
 #main-nav {
@@ -401,6 +403,7 @@ body {
 
 .category-parent {
     .category-list {
+        .make-row();
         ul,
         ol {
             .list-unstyled;
@@ -436,7 +439,6 @@ body {
     background: #000;
     .make-xs-column(12);
     padding: 60px 0;
-  
     color: @gray-lighter;
     .region-footer {
         .container;
@@ -450,7 +452,6 @@ body {
     }
     ul.menu.nav {
         .hidden-xs;
-     
         > li {
             .make-xs-column(2);
             li {
@@ -503,6 +504,9 @@ body {
         ul {
             .make-xs-column(12);
             .make-sm-column(2);
+            .lt-ie8 & {
+                .make-xs-column(2);
+            }
         }
         .clearfix();
         clear:both;
@@ -510,13 +514,17 @@ body {
     }
 }
 
+
+
 #container {
-    .container;
+    padding-bottom:30px;
+    .lt-ie8 & {
+        padding-left: 0;
+        padding-right:0;
+    }
     .clearfix();
     background: @white;
-    @media (min-width: @screen-sm-min) {
-        padding: 0 0 15px 0;
-    }
+  
     .page-node& {
         padding: 0 0 100px 0;
     }
@@ -678,8 +686,7 @@ body {
 .breadcrumb {
     background: none;
     margin: 0;
-    padding: @grid-gutter-width @grid-gutter-width (@grid-gutter-width / 2) @grid-gutter-width;
-    margin-left: (@grid-gutter-width / 2);
+    padding: @grid-gutter-width;
     a {
         font-size: 12px;
     }
@@ -1034,6 +1041,9 @@ span.label-above {
         li {
             .make-xs-column(12);
             .make-sm-column(6);
+            .lt-ie8 & {
+                .make-xs-column(6);
+            }
             padding-top: 0;
             padding-bottom: 0;
             &.item-featured {
@@ -1090,6 +1100,9 @@ p.tags {
 .main {
     .make-xs-column(12);
     .make-sm-column(9);
+    .lt-ie8 & {
+        .make-xs-column(9);
+    }
     &.full-width {
         position: relative;
         float: left;
@@ -1146,6 +1159,9 @@ p.tags {
         position: relative;
         padding: 0!important;
         .make-md-column(6);
+        .lt-ie8 & {
+            .make-xs-column(6);
+        }
         @media (min-width: 600px) {
             height: 150px
         }
@@ -1182,6 +1198,9 @@ p.tags {
         bottom: 0px;
         padding: 15px;
         .make-md-column(6);
+        .lt-ie8 & {
+            .make-xs-column(6);
+        }
         @media (min-width: @screen-sm-min) {
             float: none;
             padding: 30px;
@@ -1221,7 +1240,27 @@ p.tags {
     }
 }
 
+.page-header {
+    border-bottom: 1px solid @page-header-border-color;
+    font-weight: bold;
+    padding-bottom: @grid-padding;
+    margin: (@grid-padding * 2) @grid-padding;
+    line-height: 30px;
+}
+
 .main-content {
+    &.has-sidebar {
+        .make-sm-column(9);
+        .lt-ie8 & {
+            .make-xs-column(9);
+        }
+    }
+    &.has-sidebars {
+        .make-sm-column(6);
+        .lt-ie8 & {
+            .make-xs-column(6);
+        }
+    }
     .page-node& {
         padding-right: (@grid-padding * 2);
         .date-display-single {
@@ -1257,30 +1296,22 @@ p.tags {
     }
 }
 
-.aside {
-    .region {
-        padding-left: @grid-padding;
-        background: @submenu-bg-color;
-        .clearfix();
-        background: none;
-        border: 0;
-        border-radius: 0;
-    }
+#secondary.aside {
     .hidden-xs;
     .make-sm-column(3);
-    @media (max-width: @screen-xs-max) {
-        display: none;
+    .lt-ie8 & {
+        .make-xs-column(3);
     }
     h2 {
         margin: 0;
-        // font-size: @menu-primary-size;
+        padding: (@grid-padding * 2) @grid-padding @grid-padding @grid-padding;
         font-weight: bold;
+        border-bottom: 1px solid @brand-border-color;
+        line-height: 30px;
         a {
             color: @brand-red;
             display: block;
-            padding: 15px 10px;
-            border: 0;
-            border-bottom: 1px solid @brand-border-color;
+            padding: 0;
             -webkit-transition: background .5s ease-out;
             -moz-transition: background .5s ease-out;
             -o-transition: background .5s ease-out;
@@ -1293,6 +1324,14 @@ p.tags {
             }
         }
     }
+    .region {
+        background: @submenu-bg-color;
+        .clearfix();
+        background: none;
+        border: 0;
+        border-radius: 0;
+    }
+
     ul.menu.nav {
         a {
             .wordwrap();
@@ -1400,6 +1439,9 @@ p.tags {
                 .make-sm-column(3);
                 margin: 0 5px 15px 0;
                 padding: 0;
+                .lt-ie8 & {
+                    .make-xs-column(3);
+                }
             }
             .date-display-single {
                 display: inline-block;
@@ -1482,7 +1524,10 @@ p.tags {
     .teaser-desc {
         float: left;
         .make-xs-column(9);
-        .make-sm-column(8)
+        .make-sm-column(8);
+        .lt-ie8 & {
+            .make-xs-column(8);
+        }
     }
 }
 
@@ -1963,7 +2008,7 @@ body.pushy-open-left .hamburger {
 
 .view-land-power-forum-themes {
     .views-exposed-form {
-        .make-xs-column(12)
+        .make-xs-column(12);
     }
     .views-row {
         .make-row;

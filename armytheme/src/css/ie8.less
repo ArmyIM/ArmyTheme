@@ -2,6 +2,9 @@
 // Core variables and mixins
 @import "less/variables.less";
 @import "less/mixins.less";
+
+
+
 html.lt-ie8 {
     font-size: 100%;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
@@ -360,36 +363,4 @@ html.lt-ie8 .carousel-indicators li,
 html.lt-ie8 .help-block {
     display: inline;
     zoom: 1;
-}
-
-.news {
-    li {
-        .make-xs-column(6);
-    }
-}
-
-.panel-4col {
-    .left-col,
-    .midleft-col,
-    .midright-col,
-    .right-col {
-        .make-xs-column(3);
-    }
-}
-
-
-
-.menu.nav {
-  
-  ul {
-
-    li {display:inline-block}
-  }
-}
-
-
-.region-footer {
-    > li {
-        .make-xs-column(2);
-    }
 }
