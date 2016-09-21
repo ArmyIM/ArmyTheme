@@ -55,6 +55,9 @@
             width: 60%;
             left: 0;
             bottom: 25px;
+                .lt-ie8 & {
+               padding:15px;
+            }
             @media (max-width: @screen-md-min) {
                 bottom: 0;
             }
@@ -322,6 +325,7 @@
     border: none;
     outline: none;
     z-index: 300;
+    
     &:hover,
     &:focus {
         outline: none;
@@ -339,6 +343,9 @@
     }
     @media (min-width: @screen-md-min) {
         display: none!important;
+    }
+    .lt-ie8 & {
+        display: none;
     }
 }
 
