@@ -3,7 +3,6 @@ description = Custom theme for Army website
 core = 7.x
 base theme = bootstrap
 
-
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Regions
 ;;;;;;;;;;;;;;;;;;;;;
@@ -21,7 +20,7 @@ regions[sidebar_second] = 'Secondary sidebar'
 regions[footer]         = 'Footer'
 regions[bottom]    		= 'Page bottom'
 
-; Panels layouts. You can place multiple layouts under the "layouts" folder.
+; Panels layouts. Place multiple layouts under the "layouts" folder.
 plugins[panels][layouts] = layouts
 
 ;;;;;;;;;;;;;;;;;;;;;

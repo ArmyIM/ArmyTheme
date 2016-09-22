@@ -1,12 +1,3 @@
-<?php
-
-/**
- * @file
- * Slides block view template.
-
- */
-?>
-
 <div id="feature-slides" style="display:none;">
  <?php if ($rows): ?>
       <?php print $rows; ?>
@@ -14,13 +5,11 @@
 
 </div>
 <div id="dots-nav" class="container"></div>
-
 <script>
 jQuery(document).ready(function($) {
   var $slider = $('#feature-slides')
   		.on('init', function(slick) {
             $('#feature-slides').fadeIn(1000);
-
         })
   .slick({
 			focusOnSelect: true,
