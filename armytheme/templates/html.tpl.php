@@ -25,12 +25,12 @@
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
 <!--[if lte IE 8]>
-  <link rel="stylesheet" type="text/css" href="sites/all/themes/armytheme/dist/css/ie8.min.css" />
+  <link rel="stylesheet" type="text/css" href="/sites/all/themes/armytheme/dist/css/ie8.min.css" />
   <![endif]-->
 
   <!-- HTML5 element support for IE6-8 -->
   <!--[if lt IE 9]>
-    <script type="text/javascript" src="sites/all/themes/armytheme/dist/js/html5shiv.min.js"></script>
+    <script type="text/javascript" src="/sites/all/themes/armytheme/dist/js/html5shiv.min.js"></script>
   <![endif]-->
 <?php print $scripts; ?>
 </head> 
@@ -47,7 +47,7 @@
   <?php print $page; ?>
   <?php print $page_bottom; ?>
 <!--[if gt IE 8]><!-->
-<script type="text/javascript" src="sites/all/themes/armytheme/dist/js/pushy.min.js"></script>
+<script type="text/javascript" src="/sites/all/themes/armytheme/dist/js/pushy.min.js"></script>
 <!--<![endif]-->
 <!--[if gt IE 8]><!-->
   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57c9545832e949a6"></script>
