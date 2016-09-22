@@ -73,10 +73,8 @@
 @import "less/fontawesome/icons.less";
 //  @import "less/fontawesome/screen-reader.less";
 @h1-mobile: 26px;
-
 .inline-block() {
-    display:inline-block;
-
+    display: inline-block;
     .lt-ie7 & {
         display: inline;
         zoom: 1;
@@ -141,9 +139,6 @@ body {
         .field-item {
             display: block;
         }
-
-
-
         #container {
             position: relative;
             margin-top: -50px;
@@ -233,15 +228,24 @@ body {
 // Page header
 // -------------------------
 .panel-4col {
+    .left-col-outer {
+        .make-sm-column(9);
+    }
+    .right-col-outer {
+        .hidden-xs;
+        .make-sm-column(3);
+    }
     .left-col,
     .midleft-col,
     .midright-col,
+    {
+        .make-sm-column(4);
+        .lt-ie8 & {
+            .make-xs-column(4);
+        }
+    }
     .right-col {
         .make-xs-column(12);
-        .make-sm-column(3);
-        .lt-ie8 & {
-            .make-xs-column(3);
-        }
     }
     .front & {
         .make-xs-column(12);
@@ -611,6 +615,10 @@ body {
 .main-col {}
 
 .bottom-col {
+    ul {
+        .list-unstyled;
+        padding: 0;
+    }
     .make-xs-column(12);
     clear: both;
     .inside {
@@ -661,8 +669,6 @@ body {
             margin-bottom: 5px;
             font-size: @font-size-h4;
             .link-hover();
-
-
         }
     }
 }

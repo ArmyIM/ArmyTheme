@@ -8,29 +8,32 @@
 
  */
 ?>
-
 <div class="panels panel-4col clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
-  <div class="left-col">
-   <?php print $content['left']; ?>
+  <div class="left-col-outer">
+    <div class="row">
+        <div class="left-col">
+          <?php print $content['left']; ?>
+        </div>
+        <div class="midleft-col">
+          <?php print $content['midleft']; ?>
+        </div>
+        <div class="midright-col">
+          <?php print $content['midright']; ?>
+        </div>
+        <?php if (!empty($content['bottom'])): ?>
+        <div class="bottom-col">
+          <?php print $content['bottom']; ?>
+        </div>
+        <?php endif; ?>
+    </div>
   </div>
-
-  <div class="midleft-col">
-   <?php print $content['midleft']; ?>
+  <div class="right-col-outer">
+    <div class="row">
+        <div class="right-col">
+          <div class="inside">
+            <?php print $content['right']; ?>
+           </div>
+        </div>
+    </div>
   </div>
-  
-  <div class="midright-col">
-   <?php print $content['midright']; ?>
-  </div>
-
-  <div class="right-col">
-  <div class="inside">
-   <?php print $content['right']; ?>
-   </div>
-  </div>
-
-<?php if (!empty($content['bottom'])): ?>
-   <div class="bottom-col">
- <?php print $content['bottom']; ?>
-  </div>
-   <?php endif; ?>
 </div>
