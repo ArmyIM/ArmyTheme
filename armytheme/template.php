@@ -1,4 +1,7 @@
 <?php
+
+ drupal_add_js(drupal_get_path('theme', 'armytheme') . '/dist/js/pushy.min.js', array('type' => 'file', 'scope' => 'footer'));
+ 
 function armytheme_preprocess_page(&$vars, $hook)
 {
     drupal_add_js('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array(
