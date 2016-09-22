@@ -1,9 +1,9 @@
 <?php
 
- drupal_add_js(drupal_get_path('theme', 'armytheme') . '/dist/js/pushy.min.js', array('type' => 'file', 'scope' => 'footer'));
- 
+
 function armytheme_preprocess_page(&$vars, $hook)
 {
+    drupal_add_js(drupal_get_path('theme', 'armytheme') . '/dist/js/pushy.min.js', array('type' => 'file', 'scope' => 'footer'));
     drupal_add_js('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array(
         'type' => 'external'
       ));
@@ -24,8 +24,9 @@ function armytheme_menu_link__main_menu($variables)
   $element = $variables['element'];
   $sub_menu = '';
   if ($element['#below']) {
-    if (($element['#original_link']['menu_name'] == 'management') && (module_exists('navbar'))) {
-      $sub_menu = drupal_render($element['#below']);
+     if($element['#theme'][0] === 'menu_link__menu_block__6'){
+        $element['#title'] .= ' <span class="caret"></span>';
+        $element['#attributes']['class'][] = 'pushy-submenu';
     } elseif ((!empty($element['#original_link']['depth'])) && $element['#original_link']['depth'] > 1) {
       unset($element['#below']['#theme_wrappers']);
       $sub_menu = '<ul class="dropdown-menu-nav">' . drupal_render($element['#below']) . '</ul>';
@@ -36,8 +37,8 @@ function armytheme_menu_link__main_menu($variables)
     } else {
       unset($element['#below']['#theme_wrappers']);
       $sub_menu = '<ul class="dropdown-menu-nav">' . drupal_render($element['#below']) . '</ul>';
-      $element['#title'] .= ' <span class="caret"></span>';
-      $element['#attributes']['class'][] = 'dropdown pushy-submenu';
+     // $element['#title'] .= ' <span class="caret"></span>';
+      $element['#attributes']['class'][] = 'dropdown';
       $element['#localized_options']['html'] = TRUE;
       $element['#localized_options']['attributes']['class'][] = 'dropdown-toggle';
       $element['#localized_options']['attributes']['data-toggle'] = 'dropdown';
@@ -49,11 +50,7 @@ function armytheme_menu_link__main_menu($variables)
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
-function armytheme_menu_link__menu_block_6(array $variables) {
-  $variables['element']['#attributes']['class'][] = 'blah-' . $variables['element']['#original_link']['mlid'];
- $variables['element']['#localized_options']['attributes']['class'][] = 'menu-' . $variables['element']['#original_link']['mlid'];
-  return armytheme_menu_link__menu_block__6($variables);
-}
+
 function armytheme_preprocess_field(&$variables) {
   $items = $variables['items'];
   $node = $variables['element']['#object'];

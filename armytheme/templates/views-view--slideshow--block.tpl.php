@@ -2,7 +2,6 @@
  <?php if ($rows): ?>
       <?php print $rows; ?>
      <?php endif; ?>
-
 </div>
 <div id="dots-nav" class="container"></div>
 <script>
@@ -15,6 +14,7 @@ jQuery(document).ready(function($) {
 			focusOnSelect: true,
             lazyLoad: 'ondemand',
             dots: true,
+            //fade:true,
             centerMode: true,
             pauseOnDotsHover: true,
             infinite: true,

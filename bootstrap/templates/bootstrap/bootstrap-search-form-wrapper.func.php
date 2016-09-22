@@ -10,11 +10,16 @@
  * @ingroup theme_functions
  */
 function bootstrap_bootstrap_search_form_wrapper($variables) {
-  $output = '<div class="input-group">';
+  $output = '<div role="search" class="input-group">';
+  $output .= '<label class="sr-only" for="search_block_form" aria-label="Search for:"></label>';
   $output .= $variables['element']['#children'];
   $output .= '<span class="input-group-btn">';
-  $output .= '<button type="submit" class="btn btn-primary">' . _bootstrap_icon('search', t('Search')) . '</button>';
+  $output .= '<button aria-label="Perform search." type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>';
   $output .= '</span>';
   $output .= '</div>';
   return $output;
 }
+
+
+
+

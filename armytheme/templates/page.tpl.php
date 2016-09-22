@@ -23,7 +23,7 @@
     <div class="mobile-header visible-xs">
       <button class="hamburger pushy-link" type="button"> <span class="hamburger-box">
         <span class="hamburger-inner"></span></span>
-      </button> <a id="logo-mobile" href="index.php">
+      </button> <a id="logo-mobile" href="<?php print $front_page; ?>">
     <img src="<?php print $logo; ?>" alt="Australian Army" />
     </a> </div>
     <div id="top-nav">

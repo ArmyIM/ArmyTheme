@@ -140,6 +140,7 @@ body {
             display: block;
         }
         #container {
+            padding:0;
             position: relative;
             margin-top: -50px;
             .menu.nav,
@@ -231,6 +232,7 @@ body {
     .right-col-outer {
         .hidden-xs;
         .make-sm-column(3);
+        
     }
     .left-col,
     .midleft-col,
@@ -241,17 +243,7 @@ body {
         .lt-ie8 & {
             .make-xs-column(4);
         }
-    }
-    .right-col {
-        .make-xs-column(12);
-    }
-    .front & {
-        .make-xs-column(12);
-        background: #fff;
-        .left-col,
-        .midleft-col,
-        .midright-col,
-        {
+        .front & {
             @media (max-width: @screen-xs-max) {
                 .field.field-type-image {
                     height: 100px;
@@ -264,6 +256,13 @@ body {
                 }
             }
         }
+    }
+    .right-col {
+        .make-xs-column(12);
+    }
+    .front & {
+        .make-xs-column(12);
+        background: #fff;
         @media (min-width: @screen-sm-min) {
             padding-right: 0;
         }
@@ -638,7 +637,6 @@ body {
         .make-sm-column(4);
     }
     .right-col {
-       
         .make-sm-column(8);
         a {
             .inline-block();
@@ -666,13 +664,14 @@ body {
     }
 }
 
-.panel-2col-stacked,.bootstrap-twocol-stacked {
+.panel-2col-stacked,
+.bootstrap-twocol-stacked {
     .left-col {
         .make-xs-column(12);
         .make-sm-column(8);
     }
     .right-col {
-         .hidden-xs;
+        .hidden-xs;
         .make-sm-column(4);
     }
 }
@@ -736,9 +735,9 @@ body {
     a {
         font-size: 12px;
     }
-
-     @media (max-width: @screen-xs-max) {
-       padding-bottom:5px;}
+    @media (max-width: @screen-xs-max) {
+        padding-bottom: 5px;
+    }
 }
 
 //////////////////////////////////////////////////////////////////////////////////
@@ -996,7 +995,7 @@ span.label-above {
 #search-block-form {
     .inline-block();
     vertical-align: middle;
-    width: 300px;
+    width: 240px;
     .fa {
         color: #BBB
     }
@@ -1295,10 +1294,9 @@ p.tags {
     padding-bottom: @grid-padding;
     margin: (@grid-padding * 2) @grid-padding;
     line-height: 30px;
-
-     @media (max-width: @screen-xs-max) {
-        font-size:@font-size-h3;
-            margin:  @grid-padding;
+    @media (max-width: @screen-xs-max) {
+        font-size: @font-size-h3;
+        margin: @grid-padding;
     }
 }
 
@@ -1470,10 +1468,7 @@ p.tags {
 }
 
 .aside-list {
-    padding: 15px;
-    @media (max-width: @screen-md-min) {
-        padding: 10px;
-    }
+   padding: 15px;
     h2 {
         margin: 5px 0;
         font-size: @font-size-h3;
@@ -1660,7 +1655,7 @@ p.tags {
     .menu-block-wrapper {
         float: right
     }
-    img {
+    .bean-image, img {
         float: left;
     }
     ul {
