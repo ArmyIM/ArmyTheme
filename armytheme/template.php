@@ -25,8 +25,10 @@ function armytheme_menu_link__main_menu($variables)
   $sub_menu = '';
   if ($element['#below']) {
      if($element['#theme'][0] === 'menu_link__menu_block__6'){
-        $element['#title'] .= ' <span class="caret"></span>';
-        $element['#attributes']['class'][] = 'pushy-submenu';
+       unset($element['#below']['#theme_wrappers']);
+      $sub_menu = '<ul class="pushy-submenu">' . drupal_render($element['#below']) . '</ul>';
+      $element['#attributes']['class'][] = 'pushy-submenu';
+
     } elseif ((!empty($element['#original_link']['depth'])) && $element['#original_link']['depth'] > 1) {
       unset($element['#below']['#theme_wrappers']);
       $sub_menu = '<ul class="dropdown-menu-nav">' . drupal_render($element['#below']) . '</ul>';
