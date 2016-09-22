@@ -33,7 +33,6 @@ stylesheets[all][] = dist/css/styles.min.css
 ;; Scripts
 ;;;;;;;;;;;;;;;;;;;;;
 
-scripts[] = 'dist/js/slick.min.js'
 scripts[] = 'dist/js/scripts.min.js'
 
 ; Disable BootstrapCDN so the compiled LESS source files can be used.
