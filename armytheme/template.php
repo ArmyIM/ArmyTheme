@@ -1,6 +1,5 @@
 <?php
 
-
 function armytheme_preprocess_page(&$vars, $hook)
 {
     drupal_add_js(drupal_get_path('theme', 'armytheme') . '/dist/js/pushy.min.js', array('type' => 'file', 'scope' => 'footer'));
@@ -16,6 +15,8 @@ function armytheme_js_alter(&$javascript) {
     '/dist/js/jquery-1.12.4.min.js';
     $javascript['misc/jquery.js']['version'] = '1.7.2';
 }
+
+
 function armytheme_menu_tree__primary(&$variables) {
   return '<ul class="menu nav">' . $variables['tree'] . '</ul>';
 }
