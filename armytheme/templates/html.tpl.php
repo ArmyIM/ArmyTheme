@@ -24,10 +24,6 @@
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
-  <!-- HTML5 element support for IE6-8 -->
-  <!--[if lt IE 9]>
-    <script type="text/javascript" src="/sites/all/themes/armytheme/dist/js/html5shiv.min.js"></script>
-  <![endif]-->
 <?php print $scripts; ?>
 </head> 
 <body <?php print $body_attributes; ?>>
