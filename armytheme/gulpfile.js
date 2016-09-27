@@ -9,7 +9,7 @@ gulp.task('default', ['watch']);
 
 gulp.task('browser-sync', function() {
    browserSync.init({
-    proxy: "localhost:8083"
+    proxy: "localhost:8000"
     });
 
     gulp.watch('src/js/libs/**/*.js', ['squish-jquery']);
