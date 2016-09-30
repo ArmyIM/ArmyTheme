@@ -801,8 +801,14 @@
     }
     
     .tags {
-        a {}
+        h5 {
+            font-size: @font-size-base
+        }
     }
+
+      .read-more {
+            font-size: @font-size-base;
+        }
     
     .label-inline {
         .inline-block();
@@ -1612,12 +1618,16 @@
             &:first-child {
                 margin-top: 0;
             }
+            p > a {
+                font-size: @font-size-base;
+            }
         }
         h3 {
-            margin:0!important;
+            margin: 0!important;
         }
-
-        .date-display-single {margin-bottom:5px;}
+        .date-display-single {
+            margin-bottom: 5px;
+        }
         .teaser-desc {
             float: left;
             .make-xs-column(9);
