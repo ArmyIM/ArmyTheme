@@ -800,11 +800,8 @@ body {
     margin-bottom: 15px;
 }
 
-
-
-
 .tags {
-
+    padding: 10px 0;
     .vocabulary-tags {
         display: inline-block;
         vertical-align: middle;
@@ -812,9 +809,13 @@ body {
     h2 {
         font-size: @font-size-base;
         display: inline-block;
-        margin: 0 5px 0 0;
+        margin: 0 10px 0 0;
         font-weight: normal;
-        a{color:@black}
+        a {
+            color: @black;
+            text-decoration: underline;
+            .label;
+        }
     }
 }
 
@@ -1420,6 +1421,7 @@ p.tags {
         .make-xs-column(3);
         padding-left: (@grid-padding * 2);
     }
+
     h2 {
         margin: 0;
         padding: (@grid-padding * 2) @grid-padding @grid-padding @grid-padding;
@@ -1542,6 +1544,9 @@ p.tags {
 
 .aside-list {
     padding: 15px;
+
+        .date-display-single {   .inline-block();font-size:12px;}
+
     h2 {
         margin: 5px 0;
         font-size: @font-size-h3;
@@ -1562,10 +1567,8 @@ p.tags {
                     .make-xs-column(3);
                 }
             }
-            .date-display-single {
-                .inline-block();
-                font-size: 12px;
-            }
+          
+
             h3 {
                 margin: 5px 0 0 0;
                 a {
@@ -1578,7 +1581,6 @@ p.tags {
             .date-display-single {
                 display: block;
                 margin-bottom: 3px;
-                //font-size: 12px;
             }
             a {
                 display: block;
@@ -2022,5 +2024,6 @@ p.tags {
     background-color: #e86256;
     opacity: 1;
 }
+
 @import "less/pushy.less";
 @import "less/contextual.less";
