@@ -331,7 +331,6 @@ function bootstrap_js_alter(&$js) {
   }
 
   // Always add bootstrap.js last.
-  $bootstrap = $theme_path . '/js/bootstrap.js';
   $js[$bootstrap] = drupal_js_defaults($bootstrap);
   $js[$bootstrap]['group'] = JS_THEME;
   $js[$bootstrap]['scope'] = 'footer';
