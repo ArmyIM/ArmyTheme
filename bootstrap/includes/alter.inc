@@ -330,11 +330,7 @@ function bootstrap_js_alter(&$js) {
     $js['misc/jquery.once.js'] += drupal_js_defaults('misc/jquery.once.js');
   }
 
-  // Always add bootstrap.js last.
-  $js[$bootstrap] = drupal_js_defaults($bootstrap);
-  $js[$bootstrap]['group'] = JS_THEME;
-  $js[$bootstrap]['scope'] = 'footer';
-
+  
   if (!empty($excludes)) {
     $js = array_diff_key($js, drupal_map_assoc($excludes));
   }
