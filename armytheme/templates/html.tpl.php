@@ -37,6 +37,8 @@
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
-  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57c9545832e949a6"></script>
+  <script>    
+  baguetteBox.run('.gallery');
+</script>
 </body>
 </html>

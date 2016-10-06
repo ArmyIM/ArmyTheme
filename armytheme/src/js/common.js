@@ -20,11 +20,5 @@ jQuery(document).ready(function($) {
 
     $('#secondary li.expanded a').addClass('disabled');
 
-            /* Basic Gallery */
-            $( '.swipebox' ).swipebox();
-            
-            /* Video */
-            $( '.swipebox-video' ).swipebox();
-
           
 });
