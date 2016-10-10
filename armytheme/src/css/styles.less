@@ -80,7 +80,7 @@
             zoom: 1;
         }
     }
-
+    
     html,
     body {
         background: #000;
@@ -1120,6 +1120,18 @@
             &:extend(.btn all);
             .btn-primary;
         }
+    }
+    
+    .quicktabs-tabs {
+
+         &:extend(.nav all);
+        > li {
+            > a {
+                padding: 5px 15px;
+            }
+        }
+
+        &:extend(.nav-tabs all);
     }
     
     .underline {
