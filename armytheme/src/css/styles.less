@@ -80,20 +80,7 @@
             zoom: 1;
         }
     }
-    
-    .container {
-        width: @container-desktop !important;
-    }
-    
-    @screen-xs: 0; //480px;
-    @screen-xs-min: 0;
-    @screen-xs-max: 0;
-    @screen-sm: 0; //768px;
-    @screen-sm-min: 0;
-    @screen-sm-max: 0;
-    @screen-md: 0;
-    @screen-md-min: 0;
-    @screen-md-max: 0;
+
     html,
     body {
         background: #000;
@@ -238,8 +225,9 @@
                         .left-col {
                             .make-xs-column(12);
                         }
-
-                        .right-col {display: none}
+                        .right-col {
+                            display: none
+                        }
                     }
                 }
             }
@@ -2044,6 +2032,12 @@
     .no-touch .scroll-to-top:hover {
         background-color: #e86256;
         opacity: 1;
+    }
+    
+    .quicktabs_main {
+        .left-col {
+            .make-xs-column(12);
+        }
     }
     
     @import "less/pushy.less";
