@@ -107,6 +107,7 @@
         }
         &.grid-layout {
             ul.category-list-items {
+                .make-row;
                 li {
                     .make-sm-column(4)!important;
                     border: 0;
@@ -721,6 +722,7 @@
             .list-unstyled;
         }
         .category-list-items {
+            .clearfix;
             .list-unstyled;
         }
         li {
@@ -1127,6 +1129,8 @@
         > li {
             > a {
                 padding: 5px 15px;
+                font-weight:bold;
+                font-size:16px;
             }
         }
         &:extend(.nav-tabs all);
