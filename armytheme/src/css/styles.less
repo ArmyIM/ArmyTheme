@@ -285,6 +285,9 @@
                 }
             }
         }
+        .middle-col {
+            padding: @grid-gutter-width;
+        }
         .right-col {
             .make-xs-column(12);
         }
@@ -1125,13 +1128,18 @@
     }
     
     .quicktabs-tabs {
+        margin-top: 26px;
         &:extend(.nav all);
         > li {
+            padding: 0;
             > a {
                 padding: 5px 15px;
-                font-weight:bold;
-                font-size:16px;
+                font-weight: bold;
+                font-size: 16px;
             }
+        }
+        img {
+            margin-bottom: (@grid-padding * 2)
         }
         &:extend(.nav-tabs all);
     }
