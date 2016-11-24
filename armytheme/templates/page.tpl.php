@@ -9,10 +9,16 @@
  *
  * @ingroup templates
  */
- $Boolclass = NULL;
+ $HideRightSideContent = NULL;
  if (isset($node->field_override_with_own_side_con[LANGUAGE_NONE][0]['value']) && $node->field_override_with_own_side_con[LANGUAGE_NONE][0]['value'] == 1 ) :
-        $Boolclass = 'hide-global-sidecontent';
+        $HideRightSideContent = 'hide-global-sidecontent';
  endif;
+
+  $CategoryImageSmall = NULL;
+ if (isset($node->field_small_feature_image[LANGUAGE_NONE][0]['value']) && $node->field_small_feature_image[LANGUAGE_NONE][0]['value'] == 1 ) :
+        $CategoryImageSmall = 'category-sm-img';  
+ endif;
+
 ?>
 <nav class="pushy pushy-left">
   <?php print render($page[ 'mobile_header']); ?> </nav>
