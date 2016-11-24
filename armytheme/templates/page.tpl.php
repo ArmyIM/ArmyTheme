@@ -56,7 +56,7 @@
   </div>
   <?php }?>
 
-  <div class="content-container <?php print $Boolclass;?> <?php print $container_class; ?>" id="container">
+  <div class="content-container <?php print $HideRightSideContent;?> <?php print $CategoryImageSmall;?> <?php print $container_class; ?>" id="container">
     <?php print $breadcrumb; ?>
     <?php print render($title_suffix); ?>
     <?php if (!empty($messages)): ?>
