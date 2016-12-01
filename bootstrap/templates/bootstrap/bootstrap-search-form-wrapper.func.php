@@ -14,7 +14,7 @@ function bootstrap_bootstrap_search_form_wrapper($variables) {
   $output .= '<label class="sr-only" for="search_block_form">Search for:</label>';
   $output .= $variables['element']['#children'];
   $output .= '<span class="input-group-btn">';
-  $output .= '<button aria-label="Perform search." type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>';
+  $output .= '<button type="submit" class="btn btn-primary"><span class="fa fa-search"></span><span class="btn-label">Search</span></button>';
   $output .= '</span>';
   $output .= '</div>';
   return $output;
