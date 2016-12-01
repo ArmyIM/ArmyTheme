@@ -9,17 +9,30 @@
  *
  * @ingroup templates
  */
- $HideRightSideContent = NULL;
- if (isset($node->field_override_with_own_side_con[LANGUAGE_NONE][0]['value']) && $node->field_override_with_own_side_con[LANGUAGE_NONE][0]['value'] == 1 ) :
+$HideRightSideContent = NULL;  
+$CategoryImageSmall = NULL;
+$OneSidebar = $page[ 'sidebar_first'];
+$TwoSidebar = $page[ 'sidebar_second'];
+
+
+if (isset($node->field_override_with_own_side_con[LANGUAGE_NONE][0]['value']) && $node->field_override_with_own_side_con[LANGUAGE_NONE][0]['value'] == 1 ) :
         $HideRightSideContent = 'hide-global-sidecontent';
- endif;
+endif;
 
-  $CategoryImageSmall = NULL;
- if (isset($node->field_small_feature_image[LANGUAGE_NONE][0]['value']) && $node->field_small_feature_image[LANGUAGE_NONE][0]['value'] == 1 ) :
+
+if (isset($node->field_small_feature_image[LANGUAGE_NONE][0]['value']) && $node->field_small_feature_image[LANGUAGE_NONE][0]['value'] == 1 ) :
         $CategoryImageSmall = 'category-sm-img';  
- endif;
+endif;
 
+if (!empty($TwoSidebar)) {
+    echo  'has-sidebars';
+  }
+
+if (!empty($OneSidebar)) {
+    echo 'has-sidebar';
+  }
 ?>
+
 <nav class="pushy pushy-left">
   <?php print render($page[ 'mobile_header']); ?> </nav>
 <div class="site-overlay"></div>
@@ -80,13 +93,8 @@
       <?php print render($page[ 'sidebar_first']); ?>
     </div>
     <?php endif; ?>
-    <?php if (!empty($page[ 'sidebar_second'])): ?>
-    <div class="main-content has-sidebars">
-      <?php elseif (!empty($page[ 'sidebar_first'])): ?>
-      <div class="main-content has-sidebar">
-        <?php else: ?>
-        <div class="main-content">
-          <?php endif; ?>
+
+    <div class="main-content <?php print $OneSidebar ?> <?php print $TwoSidebar ?>">
           <a id="main-content"></a>
 
         <?php print render($title_prefix); ?>
@@ -109,15 +117,16 @@
           </ul>
           <?php endif; ?>
           <?php print render($page[ 'content']); ?>
-        </div>
+      
+
         <?php if (!empty($page[ 'sidebar_second'])): ?>
         <div id="tertiary" class="aside" role="complementary">
           <?php print render($page[ 'sidebar_second']); ?> 
         </div>
         <?php endif; ?> 
-      </div>
-    </div>
-  </div>
+
+      </div>    
+</div>
 </div>
 
   <?php if (!empty($page[ 'footer'])): ?>
