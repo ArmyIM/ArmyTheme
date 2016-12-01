@@ -31,8 +31,9 @@
     <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     </div>
 <![endif]-->
-  <div id="skip-link">
-    <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
+  <div id="skip-links">
+    <a href="#main-content">Skip to main content</a>
+    <a href="#edit-search-block-form--2">Skip to search</a></li>
   </div>
   <?php print $page_top; ?>
   <?php print $page; ?>
