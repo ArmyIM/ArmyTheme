@@ -20,10 +20,6 @@ jQuery(document).ready(function($) {
 
     $('#secondary li.expanded a').addClass('disabled');
 
-    $('#quicktabs-story_media_tabs a').click(function (e) {
-    e.preventDefault()
-    $(this).tab('show')
-    })
-
+ 
           
 });
