@@ -25,11 +25,11 @@ if (isset($node->field_small_feature_image[LANGUAGE_NONE][0]['value']) && $node-
 endif;
 
 if (!empty($TwoSidebar)) {
-    echo 'has-sidebars';
+    $TwoSidebar = 'has-sidebars';
   }
 
 if (!empty($OneSidebar)) {
-    echo 'has-sidebar';
+    $OneSidebar = 'has-sidebar';
   }
 ?>
 
