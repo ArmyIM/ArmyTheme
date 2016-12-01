@@ -19,8 +19,9 @@
 @brand-success:         #5cb85c;
 @brand-info:            #5bc0de;
 @brand-warning:         #f0ad4e;
+@brand-warning-text:    darken(@brand-warning,20%);
 @brand-danger:          darken(@brand-red,1%);
-@brand-danger-text:		darken(@brand-red,15%);
+@brand-danger-text:		darken(@brand-red,20%);
 
 
 @brand-links: 			@brand-red;
@@ -74,9 +75,9 @@
 @state-info-bg:                  lighten(@brand-blue,40%);
 @state-info-border:              lighten(@brand-blue,40%);
 
-@state-warning-text:             darken(@brand-yellow,12%);
-@state-warning-bg:               lighten(@brand-yellow,45%);
-@state-warning-border:           lighten(@brand-yellow,45%);
+@state-warning-text:             @brand-warning-text;
+@state-warning-bg:               lighten(@brand-warning,45%);
+@state-warning-border:           lighten(@brand-warning,45%);
 
 @state-danger-text:              @brand-danger-text;
 @state-danger-bg:                lighten(@brand-danger,45%);
