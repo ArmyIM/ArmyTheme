@@ -88,6 +88,41 @@
         -webkit-overflow-scrolling: touch;
     }
     
+    .skip-to-content {
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        z-index: 10;
+        text-align: center;
+        text-align: center;
+        font-size: 21px;
+    }
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+.skip-to-content:focus {
+    padding:21px
+}
+.sr-only-focusable:active,.sr-only-focusable:focus {
+    width:auto;
+    height:auto;
+    margin:0;
+    overflow:visible;
+    clip:auto;
+    position:absolute
+}
+
+
     .body-wrap {
         background: #f1f1f1;
     }
@@ -777,7 +812,7 @@
     .breadcrumb {
         background: none;
         margin: 0;
-        padding: @grid-gutter-width;
+        padding: @grid-gutter-width @grid-gutter-width 0 @grid-gutter-width;
         a {
             font-size: 12px;
             color: @black;
@@ -1510,6 +1545,7 @@
                 -o-transition: background .5s ease-out;
                 transition: background .5s ease-out;
                 margin-bottom: -1px;
+                &.active-trail,
                 &:hover,
                 &:focus {
                     color: @brand-red;

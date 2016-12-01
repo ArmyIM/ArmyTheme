@@ -30,9 +30,11 @@
     <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     </div>
 <![endif]-->
-  <div id="skip-links">
-    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
-  </div>
+
+  <a class="skip-to-content sr-only sr-only-focusable" href="#main-content">Skip to main content</a>
+  <a class="skip-to-content sr-only sr-only-focusable hidden-xs" href="#main-nav">Skip to main navigation</a>
+  <a class="skip-to-content sr-only sr-only-focusable" href="#edit-search-block-form--2">Skip to search input</a>
+
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
