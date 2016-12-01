@@ -31,7 +31,7 @@
     </div>
 <![endif]-->
   <div id="skip-links">
-    <a href="#main-content">Skip to main content</a>
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
   </div>
   <?php print $page_top; ?>
   <?php print $page; ?>
