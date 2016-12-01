@@ -25,7 +25,7 @@ if (isset($node->field_small_feature_image[LANGUAGE_NONE][0]['value']) && $node-
 endif;
 
 if (!empty($TwoSidebar)) {
-    echo  'has-sidebars';
+    echo 'has-sidebars';
   }
 
 if (!empty($OneSidebar)) {
@@ -78,7 +78,7 @@ if (!empty($OneSidebar)) {
   </div>
   <?php }?>
 
-  <div class="content-container <?php print $HideRightSideContent;?> <?php print $CategoryImageSmall;?> <?php print $container_class; ?>" id="container">
+  <div class="content-container <?php $HideRightSideContent;?> <?php $CategoryImageSmall;?> <?php print $container_class; ?>" id="container">
     <?php print $breadcrumb; ?>
     <?php print render($title_suffix); ?>
     <?php if (!empty($messages)): ?>
