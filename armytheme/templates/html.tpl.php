@@ -19,7 +19,6 @@
 <!--<![endif]-->
 <head>
   <link rel="profile" href="<?php print $grddl_profile; ?>" />
-  <meta charset="utf-8">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
@@ -33,7 +32,6 @@
 <![endif]-->
   <div id="skip-links">
     <a href="#main-content">Skip to main content</a>
-    <a href="#search_block_form">Skip to search</a></li>
   </div>
   <?php print $page_top; ?>
   <?php print $page; ?>

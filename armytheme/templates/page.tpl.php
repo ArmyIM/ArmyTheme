@@ -26,23 +26,31 @@
 
 <div id="header" role="banner" class="header push">
   <div class="container <?php print $container_class; ?>">
+    
     <div class="mobile-header visible-xs">
       <button class="hamburger pushy-link" type="button"> <span class="hamburger-box">
         <span class="hamburger-inner"></span></span>
-      </button> <a id="logo-mobile" href="<?php print $front_page; ?>">
-    <img src="<?php print $logo; ?>" alt="Australian Army" />
-    </a> </div>
+      </button> 
+      <a id="logo-mobile" href="<?php print $front_page; ?>">
+        <img src="<?php print $logo; ?>" alt="Australian Army" />
+      </a> 
+    </div>
+
     <div id="top-nav">
-      <?php print render($page[ 'top']); ?> </div>
-    <?php if ($logo): ?> <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+      <?php print render($page[ 'top']); ?> 
+    </div>
+    <?php if ($logo): ?> 
+    <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
       <img src="<?php print $logo; ?>" alt="Australian Army" />
     </a>
     <?php endif; ?>
+
     <?php if (!empty($page[ 'navigation'])): ?>
     <div id="main-nav" role="navigation">
       <?php print render($page[ 'navigation']); ?>
     </div>
     <?php endif; ?> 
+
   </div>
 </div>
 
@@ -50,6 +58,7 @@
   <?php if (drupal_is_front_page() && !empty($page[ 'highlighted'])) {?>
   <?php print render($page[ 'highlighted']); ?>
   <?php }?>
+
   <?php if (!drupal_is_front_page() && !empty($page[ 'highlighted'])) {?>
   <div class="highlighted jumbotron">
     <?php print render($page[ 'highlighted']); ?>
@@ -65,6 +74,7 @@
     <?php if (!empty($tabs)): ?>
     <?php print render($tabs); ?>
     <?php endif; ?>
+
     <?php if (!empty($page[ 'sidebar_first'])): ?>
     <div id="secondary" class="aside" role="complementary">
       <?php print render($page[ 'sidebar_first']); ?>
@@ -120,6 +130,6 @@
   <?php endif; ?>
   <a href="#0" class="scroll-to-top">
     <div class='scroll icon'>
-    <i class="fa fa-4x fa-angle-up"></i>
+    <span class="fa fa-4x fa-angle-up"></span>
     </div>
   </a>
