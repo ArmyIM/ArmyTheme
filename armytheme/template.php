@@ -9,6 +9,15 @@ function armytheme_preprocess_page(&$vars, $hook)
     drupal_add_js(drupal_get_path('theme', 'armytheme') . '/dist/js/pushy.min.js', array('type' => 'file', 'scope' => 'footer'));
 }
 
+
+function armytheme_preprocess_html(&$vars) {
+
+  if (isset($node->field_grid_template_[LANGUAGE_NONE][0]['value']) && $node->field_grid_template_[LANGUAGE_NONE][0]['value'] == 1 ) :
+    $vars['classes_array'][] = 'grid-layout';
+  }
+}
+
+
 function armytheme_menu_tree__primary(&$variables) {
   return '<ul class="menu nav">' . $variables['tree'] . '</ul>';
 }

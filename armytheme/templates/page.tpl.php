@@ -14,7 +14,6 @@ $CategoryImageSmall = NULL;
 $OneSidebar = $page[ 'sidebar_first'];
 $TwoSidebar = $page[ 'sidebar_second'];
 
-
 if (isset($node->field_override_with_own_side_con[LANGUAGE_NONE][0]['value']) && $node->field_override_with_own_side_con[LANGUAGE_NONE][0]['value'] == 1 ) :
         $HideRightSideContent = 'hide-global-sidecontent';
 endif;
