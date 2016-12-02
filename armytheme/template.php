@@ -12,12 +12,28 @@ function armytheme_preprocess_page(&$vars, $hook)
 
 function armytheme_preprocess_html(&$vars) {
 
+$node = $variables['node'];
+
   $node = node_load($nid);
   $GridLayout = field_get_items('node', $node, 'field_grid_template_');
   if ($GridLayout) {
     $vars['classes_array'][] = 'grid-layout';
   }
 }
+
+
+
+function armytheme_preprocess_html(&$vars) {
+
+$node = $vars['node'];
+$field_items = field_get_items('node', $node, 'field_grid_template_');
+$GridLayout = $field_items[0]['value'];
+
+ if ($GridLayout) {
+    $vars['classes_array'][] = 'grid-layout';
+  }
+}
+
 
 
 function armytheme_menu_tree__primary(&$variables) {
