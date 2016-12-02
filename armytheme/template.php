@@ -11,6 +11,8 @@ function armytheme_preprocess_page(&$vars, $hook)
 
 
 function armytheme_preprocess_html(&$vars) {
+
+  $node = node_load($nid);
   $GridLayout = field_get_items('node', $node, 'field_grid_template_');
   if ($GridLayout) {
     $vars['classes_array'][] = 'grid-layout';
