@@ -11,9 +11,10 @@ function armytheme_preprocess_page(&$vars, $hook)
 
 
 function armytheme_preprocess_html(&$vars) {
-  if (isset($node->field_grid_template_[LANGUAGE_NONE][0]['value']) && $node->field_grid_template_[LANGUAGE_NONE][0]['value'] == 1 ) :
+  $GridLayout = field_get_items('node', $node, 'field_grid_template_');
+  if ($GridLayout) {
     $vars['classes_array'][] = 'grid-layout';
-  endif;
+  }
 }
 
 
@@ -30,7 +31,7 @@ function armytheme_menu_link__main_menu($variables)
       $sub_menu = '<ul class="pushy-submenu">' . drupal_render($element['#below']) . '</ul>';
       $element['#attributes']['class'][] = 'pushy-submenu';
 
-    } elseif ((!empty($element['#original_link']['depth'])) && $element['#original_link']['depth'] > 1) {
+    } elseif ((!empty($element['#original_link']['depth'])) && $element['#original_link']['depth'] > 1) {?
       unset($element['#below']['#theme_wrappers']);
       $sub_menu = '<ul class="dropdown-menu-nav">' . drupal_render($element['#below']) . '</ul>';
       $element['#attributes']['class'][] = 'dropdown-submenu';
