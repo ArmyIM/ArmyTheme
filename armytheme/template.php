@@ -9,8 +9,16 @@ function armytheme_preprocess_page(&$vars, $hook)
     drupal_add_js(drupal_get_path('theme', 'armytheme') . '/dist/js/pushy.min.js', array('type' => 'file', 'scope' => 'footer'));
 }
 
+function armytheme_preprocess_html(&$vars) {
 
+$node = $vars['node'];
+$field_items = field_get_items('node', $node, 'field_grid_template_');
+$GridLayout = $field_items[0]['value'];
 
+ if ($GridLayout) {
+    $vars['classes_array'][] = 'grid-layout';
+  }
+}
 
 function armytheme_menu_tree__primary(&$variables) {
   return '<ul class="menu nav">' . $variables['tree'] . '</ul>';
@@ -25,7 +33,7 @@ function armytheme_menu_link__main_menu($variables)
       $sub_menu = '<ul class="pushy-submenu">' . drupal_render($element['#below']) . '</ul>';
       $element['#attributes']['class'][] = 'pushy-submenu';
 
-    } elseif ((!empty($element['#original_link']['depth'])) && $element['#original_link']['depth'] > 1) {?
+    } elseif ((!empty($element['#original_link']['depth'])) && $element['#original_link']['depth'] > 1) {
       unset($element['#below']['#theme_wrappers']);
       $sub_menu = '<ul class="dropdown-menu-nav">' . drupal_render($element['#below']) . '</ul>';
       $element['#attributes']['class'][] = 'dropdown-submenu';
