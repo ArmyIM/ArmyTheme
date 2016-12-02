@@ -10,12 +10,15 @@ function armytheme_preprocess_page(&$vars, $hook)
 }
 
 
-function armytheme_preprocess_html(&$vars) {
 
+function armytheme_preprocess_html(&$vars) {
   if (isset($node->field_grid_template_[LANGUAGE_NONE][0]['value']) && $node->field_grid_template_[LANGUAGE_NONE][0]['value'] == 1 ) :
     $vars['classes_array'][] = 'grid-layout';
-  }
+  endif;
 }
+
+
+
 
 
 function armytheme_menu_tree__primary(&$variables) {
