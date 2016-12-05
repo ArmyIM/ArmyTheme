@@ -13,6 +13,12 @@ $HideRightSideContent = NULL;
 $CategoryImageSmall = NULL;
 $OneSidebar = $page[ 'sidebar_first'];
 $TwoSidebar = $page[ 'sidebar_second'];
+$GridLayout = NULL;
+
+
+if (isset($node->field_grid_template_[LANGUAGE_NONE][0]['value']) && $node->field_grid_template_[LANGUAGE_NONE][0]['value'] == 1 ) :
+        $GridLayout = 'grid-layout';  
+endif;
 
 if (isset($node->field_override_with_own_side_con[LANGUAGE_NONE][0]['value']) && $node->field_override_with_own_side_con[LANGUAGE_NONE][0]['value'] == 1 ) :
         $HideRightSideContent = 'hide-global-sidecontent';
@@ -93,7 +99,7 @@ if (!empty($OneSidebar)) {
     </div>
     <?php endif; ?>
 
-    <div class="main-content <?php print $OneSidebar ?> <?php print $TwoSidebar ?>">
+    <div class="main-content <?php print $GridLayout ?> <?php print $OneSidebar ?> <?php print $TwoSidebar ?>">
           <a id="main-content"></a>
 
         <?php print render($title_prefix); ?>
