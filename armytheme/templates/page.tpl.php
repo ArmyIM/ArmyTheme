@@ -99,7 +99,7 @@ if (!empty($OneSidebar)) {
     </div>
     <?php endif; ?>
 
-    <div class="main-content <?php print $GridLayout ?> <?php print $OneSidebar ?> <?php print $TwoSidebar ?>">
+    <div class="main-content <?php $GridLayout; ?> <?php print $OneSidebar ?> <?php print $TwoSidebar ?>">
           <a id="main-content"></a>
 
         <?php print render($title_prefix); ?>
