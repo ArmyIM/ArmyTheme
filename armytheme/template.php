@@ -51,15 +51,18 @@ function armytheme_preprocess_field(&$variables) {
   $node = $variables['element']['#object'];
   if (($variables['element']['#field_name'] == 'field_media_url') OR ($variables['element']['#field_name'] == 'field_video_url')){
     foreach($variables['items'] as $key => $item){
-     $url = $variables['element']['#items'][$key]['value'];
-     $stripwords = array('<','script','height','=','634px','width','1128px','"','http','www', 'player','ooyala','/','iframe.js#ec',':','src=','com','.','>');
-     $newurl = str_replace($stripwords, "", $url);
-     $variables['items'][$key]['#prefix'] ='<div class="video">';
-     $variables['items'][$key]['#markup'] = '
-    <iframe width="480" height="320" src="http://player.ooyala.com/iframe.html?ec='.$newurl.'" frameborder="1" allowfullscreen></iframe>';
-     $variables['items'][$key]['#suffix'] ='</div>';
+     $string = $variables['element']['#items'][$key]['value'];
+      $regex = '/\b(http?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|$!:,.;]*[A-Z0-9+&@#\/%=~_|$]/i';
+      preg_match_all($regex, $string, $matches);
+      $urls = $matches[0];
+      // go over all links
+      foreach($urls as $url) 
+      {
+        echo $url.'<br />';
+      }
     }
   }
 }
+
 ?>
 
