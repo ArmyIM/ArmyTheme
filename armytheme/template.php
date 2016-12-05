@@ -58,7 +58,7 @@ function armytheme_preprocess_field(&$variables) {
       // go over all links
       foreach($urls as $url) 
       {
-        echo '<iframe width="480" height="320" src="http://player.ooyala.com/iframe.html?ec=p5NjRyczqcbLngvVHd0JkQQWXjH7OIXs&pbid=e7b226b50f904bc79148cc565fec1e3f&platform=html5-priority" frameborder="1" allowfullscreen></iframe>';
+        echo '<iframe width="480" height="320" src="https://player.ooyala.com/iframe.html?ec=p5NjRyczqcbLngvVHd0JkQQWXjH7OIXs&pbid=e7b226b50f904bc79148cc565fec1e3f&platform=html5-priority" frameborder="1" allowfullscreen></iframe>';
       }
     }
   }
