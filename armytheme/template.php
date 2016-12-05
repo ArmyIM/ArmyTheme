@@ -58,7 +58,7 @@ function armytheme_preprocess_field(&$variables) {
       // go over all links
       foreach($urls as $url) 
       {
-        echo $url.'<br />';
+        echo '<iframe width="480" height="320" src="'.$url.'" frameborder="1" allowfullscreen></iframe>';
       }
     }
   }
