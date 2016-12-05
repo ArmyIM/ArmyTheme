@@ -51,14 +51,17 @@ function armytheme_preprocess_field(&$variables) {
   $node = $variables['element']['#object'];
   if (($variables['element']['#field_name'] == 'field_media_url') OR ($variables['element']['#field_name'] == 'field_video_url')){
     foreach($variables['items'] as $key => $item){
-     $string = $variables['element']['#items'][$key]['value'];
+      $string = $variables['element']['#items'][$key]['value'];
       $regex = '/\b(http?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|$!:,.;]*[A-Z0-9+&@#\/%=~_|$]/i';
       preg_match_all($regex, $string, $matches);
+
       $urls = $matches[0];
+      $newurl = str_replace( 'http://', 'https://', $urls );
+
       // go over all links
-      foreach($urls as $url) 
+      foreach($newurl as $url) 
       {
-        echo '<iframe width="480" height="320" src="https://player.ooyala.com/iframe.html?ec=p5NjRyczqcbLngvVHd0JkQQWXjH7OIXs&pbid=e7b226b50f904bc79148cc565fec1e3f&platform=html5-priority" frameborder="1" allowfullscreen></iframe>';
+        echo '<iframe width="480" height="320" src="'.$url.'" frameborder="1" allowfullscreen></iframe>';
       }
     }
   }
