@@ -56,7 +56,7 @@ function armytheme_preprocess_field(&$variables) {
      $newurl = str_replace($stripwords, "", $url);
      $variables['items'][$key]['#prefix'] ='<div class="video">';
      $variables['items'][$key]['#markup'] = '
-    <iframe width="480" height="320" src="http://player.ooyala.com/iframe.html?ec='.$newurl.'" frameborder="0" allowfullscreen></iframe>';
+    <iframe width="480" height="320" src="http://player.ooyala.com/iframe.html?ec='.$newurl.'" frameborder="1" allowfullscreen></iframe>';
      $variables['items'][$key]['#suffix'] ='</div>';
     }
   }
