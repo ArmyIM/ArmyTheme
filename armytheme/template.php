@@ -46,3 +46,25 @@ function armytheme_menu_link__main_menu($variables)
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
 
+function armytheme_preprocess_field(&$variables) {
+  $items = $variables['items'];
+  $node = $variables['element']['#object'];
+  if (($variables['element']['#field_name'] == 'field_media_url') OR ($variables['element']['#field_name'] == 'field_video_url')){
+    foreach($variables['items'] as $key => $item){
+     $url = $variables['element']['#items'][$key]['value'];
+     $stripwords = array('<','script','height','=','634px','width','1128px','"','http','www', 'player','ooyala','/','iframe.js#ec',':','com','.','>');
+     $newurl = str_replace($stripwords, "", $url);
+     $variables['items'][$key]['#prefix'] ='<div class="video">';
+     $variables['items'][$key]['#markup'] = '
+    <iframe width="480" height="320" src="http://player.ooyala.com/iframe.html?
+    ec='. $newurl .'
+    &platform=platform
+    &options[autoplay]=true&options[initialTime]=122"
+    frameborder="0" allowfullscreen>
+    </iframe>';
+     $variables['items'][$key]['#suffix'] ='</div>';
+    }
+  }
+}
+?>
+
