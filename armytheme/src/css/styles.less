@@ -243,19 +243,19 @@
                                 //  -ms-transform: translateY(-50%);
                                 // transform: translateY(-50%);
                             }
-                            &.featured-item {
-                                a.news-img {
-                                    display: block;
-                                    padding:0;
-                                    &:after {
-                                        content: none;
-                                        top: 0;
-                                    }
-                                }
-                            }
                         }
                         .date-display-single {
                             display: none;
+                        }
+                        &.featured-item {
+                            .news-img {
+                                display: block!important;
+                                padding: 0!important;
+                                &:after {
+                                    content: none;
+                                    top: 0;
+                                }
+                            }
                         }
                     }
                 }
