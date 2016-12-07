@@ -38,16 +38,9 @@ if (!empty($OneSidebar)) {
 
 
 <?php 
-$term=taxonomy_term_load($node->field_hide_category_image['und'][0]['tid']);
 
-if ($term == 1) {
-  echo 'taxonomy_term_load';
-}
-?>
-
-<?php if ($node->field_hide_category_image['und'][0]['value'] == 1) {
-  echo'node';
-}
+$view = field_view_field('taxonomy_term', $term, 'field_hide_category_image'); 
+echo 'true';
 
  ?>
 
