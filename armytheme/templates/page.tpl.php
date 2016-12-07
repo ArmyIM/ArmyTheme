@@ -19,7 +19,7 @@ if (isset($node->field_override_with_own_side_con[LANGUAGE_NONE][0]['value']) &&
         $HideRightSideContent = 'hide-global-sidecontent';
 endif;
 
-if (isset($node->field_small_feature_image[LANGUAGE_NONE][0]['value']) && $node->field_small_feature_image[LANGUAGE_NONE][0]['value'] == 1 ) :
+if (isset($node->field_small_category_image[LANGUAGE_NONE][0]['value']) && $node->field_small_category_image[LANGUAGE_NONE][0]['value'] == 1 ) :
         $CategoryImageSmall = 'category-sm-img';  
 endif;
 
