@@ -11,10 +11,10 @@ jQuery(document).ready(function($) {
             $('#feature-slides').fadeIn(1000);
         })
   .slick({
-			focusOnSelect: true,
+			      focusOnSelect: true,
+            autoPlay: true,
             lazyLoad: 'ondemand',
             dots: true,
-            //fade:true,
             centerMode: true,
             pauseOnDotsHover: true,
             infinite: true,
