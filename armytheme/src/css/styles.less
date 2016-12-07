@@ -935,8 +935,13 @@ span.label-above {
 
 .downloads {
     .well;
-    .well-sm;
     margin: 30px 0;
+    h2,h3,h4 {
+margin-top:0;
+        padding-top:0
+    }
+
+    .file a {text-decoration: underline;}
 }
 
 .author-info {
@@ -1537,6 +1542,8 @@ p.tags {
         .make-xs-column(3);
         padding-left: (@grid-padding * 2);
     }
+
+    .date-display-single {margin:0 0 5px 0;}
     h2 {
         margin: 0;
         padding: (@grid-padding * 2) @grid-padding @grid-padding @grid-padding;
@@ -1688,7 +1695,7 @@ p.tags {
                 }
             }
             h3 {
-                margin: 5px 0 0 0;
+                margin: 5px 0 0 0!important;
                 a {
                     display: block;
                     .link-hover();
