@@ -245,37 +245,6 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.slick-prev {
-    left: 30px;
-    &[dir="rtl"] {
-        left: auto;
-        right: 30px;
-    }
-    &:before {
-        font-family: "FontAwesome";
-        content: "\f053";
-        &[dir="rtl"] {
-            content: "\f054";
-        }
-    }
-}
-
-
-.slick-next {
-    right: 30px;
-    &[dir="rtl"] {
-        left: 30px;
-        right: auto;
-    }
-    &:before {
-        font-family: "FontAwesome";
-        content: "\f054";
-        &[dir="rtl"] {
-            content: @slick-prev-character;
-        }
-    }
-}
-
 
 /* Slider */
 
@@ -491,4 +460,52 @@
     }
     .hidden-xs;
     .hidden-sm;
+}
+
+
+
+.slick-prev {
+    left: 30px;
+    &[dir="rtl"] {
+        left: auto;
+        right: 30px;
+    }
+    &:before {
+        font-family: "FontAwesome";
+        content: "\f053";
+        &[dir="rtl"] {
+            content: "\f054";
+        }
+    }
+}
+
+
+.slick-next {
+    right: 30px;
+    &[dir="rtl"] {
+        left: 30px;
+        right: auto;
+    }
+    &:before {
+        font-family: "FontAwesome";
+        content: "\f054";
+        &[dir="rtl"] {
+            content: @slick-prev-character;
+        }
+    }
+}
+
+.slick-next.slick-arrow {
+    right: 30px;
+    &[dir="rtl"] {
+        left: 15px;
+        right: auto;
+    }
+    &:before {
+        font-family: "FontAwesome";
+        content: "\f054";
+        &[dir="rtl"] {
+            content: "\f053";
+        }
+    }
 }
