@@ -11,22 +11,20 @@
  */
 $HideRightSideContent = NULL;  
 $CategoryImageSmall = NULL;
+$HideCategoryImage = NULL;
 $OneSidebar = $page[ 'sidebar_first'];
 $TwoSidebar = $page[ 'sidebar_second'];
-$GridLayout = NULL;
-
-
-if (isset($term->field_grid_template_[LANGUAGE_NONE][0]['value']) && $term->field_grid_template_[LANGUAGE_NONE][0]['value'] == 1 ) :
-        $GridLayout = 'grid-layout';  
-endif;
 
 if (isset($node->field_override_with_own_side_con[LANGUAGE_NONE][0]['value']) && $node->field_override_with_own_side_con[LANGUAGE_NONE][0]['value'] == 1 ) :
         $HideRightSideContent = 'hide-global-sidecontent';
 endif;
 
-
 if (isset($node->field_small_feature_image[LANGUAGE_NONE][0]['value']) && $node->field_small_feature_image[LANGUAGE_NONE][0]['value'] == 1 ) :
         $CategoryImageSmall = 'category-sm-img';  
+endif;
+
+if (isset($node->field_hide_category_image[LANGUAGE_NONE][0]['value']) && $node->field_hide_category_image[LANGUAGE_NONE][0]['value'] == 1 ) :
+        $HideCategoryImage = 'hide-category-img';  
 endif;
 
 if (!empty($TwoSidebar)) {
@@ -83,7 +81,7 @@ if (!empty($OneSidebar)) {
   </div>
   <?php }?>
 
-  <div class="content-container <?php $HideRightSideContent;?> <?php $CategoryImageSmall;?> <?php print $container_class; ?>" id="container">
+  <div class="content-container <?php $HideRightSideContent;?> <?php $CategoryImageSmall; ?> <?php $HideCategoryImage; ?> <?php print $container_class; ?>" id="container">
     <?php print $breadcrumb; ?>
     <?php print render($title_suffix); ?>
     <?php if (!empty($messages)): ?>
@@ -99,8 +97,8 @@ if (!empty($OneSidebar)) {
     </div>
     <?php endif; ?>
 
-    <div class="main-content <?php $GridLayout;?> <?php print $OneSidebar ?> <?php print $TwoSidebar ?>">
-          <a id="main-content"></a>
+    <div class="main-content <?php print $OneSidebar ?> <?php print $TwoSidebar ?>">
+        <a id="main-content"></a>
 
         <?php print render($title_prefix); ?>
           <?php if (!empty($title)): ?>
