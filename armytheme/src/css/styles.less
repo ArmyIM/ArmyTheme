@@ -304,7 +304,13 @@ body {
         li {
             .make-sm-column(4)!important;
             border: 0;
-            .left-col {
+            &:first-child + li + li {
+                &:after {
+                    content: ' ';
+                    display: block;
+                }
+            }
+            ​ .left-col {
                 width: 100%;
             }
             .right-col {
@@ -983,7 +989,6 @@ span.label-above {
 }
 
 .widget-dark {
-
     .clearfix();
     #gradient.vertical-black;
     padding: 20px;
@@ -996,8 +1001,9 @@ span.label-above {
     img {
         .img-responsive;
     }
-    .date-display-single {color:@gray-lighter;}
-
+    .date-display-single {
+        color: @gray-lighter;
+    }
     h1,
     h2,
     h3 {
@@ -1518,8 +1524,10 @@ p.tags {
             height: 100%;
         }
     }
-
-    a:hover,a:focus{text-decoration: underline;}
+    a:hover,
+    a:focus {
+        text-decoration: underline;
+    }
 }
 
 #secondary.aside {
@@ -2039,7 +2047,8 @@ p.tags {
 .view-land-power-forum-themes {
     .views-exposed-form {
         .make-xs-column(12);
-        padding:0;margin-bottom:15px;
+        padding: 0;
+        margin-bottom: 15px;
     }
     .author-by {
         margin-left: 0!important
