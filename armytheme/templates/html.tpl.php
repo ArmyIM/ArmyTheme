@@ -19,6 +19,7 @@
 <!--<![endif]-->
 <head>
   <link rel="profile" href="<?php print $grddl_profile; ?>" />
+  <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
