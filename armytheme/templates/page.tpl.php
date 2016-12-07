@@ -9,13 +9,11 @@
  *
  * @ingroup templates
  */
-
+$HideRightSideContent = NULL;  
 $CategoryImageSmall = NULL;
 $HideCategoryImage = NULL;
-$HideRightSideContent = NULL;  
 $OneSidebar = $page[ 'sidebar_first'];
 $TwoSidebar = $page[ 'sidebar_second'];
-
 
 if (isset($node->field_override_with_own_side_con[LANGUAGE_NONE][0]['value']) && $node->field_override_with_own_side_con[LANGUAGE_NONE][0]['value'] == 1 ) :
         $HideRightSideContent = 'hide-global-sidecontent';
@@ -25,7 +23,7 @@ if (isset($node->field_small_category_image[LANGUAGE_NONE][0]['value']) && $node
         $CategoryImageSmall = 'category-sm-img';  
 endif;
 
-if (isset($node->field_hide_category_image['und'][1]['tid']) && $node->field_hide_category_image['und'][1]['tid'] == 1 ) :
+if (isset($node->field_hide_category_image[LANGUAGE_NONE][0]['value']) && $node->field_hide_category_image[LANGUAGE_NONE][0]['value'] == 1 ) :
         $HideCategoryImage = 'hide-category-img';  
 endif;
 
@@ -37,6 +35,23 @@ if (!empty($OneSidebar)) {
     $OneSidebar = 'has-sidebar';
   }
 ?>
+
+
+<?php 
+$term=taxonomy_term_load($node->field_hide_category_image['und'][0]['tid']);
+
+if ($term == 1) {
+  echo 'taxonomy_term_load';
+}
+?>
+
+<?php if ($node->field_hide_category_image['und'][0]['value'] == 1) {
+  echo'node';
+}
+
+ ?>
+
+
 
 <nav class="pushy pushy-left">
   <?php print render($page[ 'mobile_header']); ?> </nav>
