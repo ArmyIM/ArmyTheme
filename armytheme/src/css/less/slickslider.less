@@ -107,7 +107,6 @@
                 width: 100%;
                 padding: 10px;
                 text-align: center;
-                ;
                 h1 {
                     font-size: 14px;
                     margin: 0 0 5px 0
@@ -256,11 +255,12 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+
 .slick-prev {
-    left: -25px;
+    left: 15px;
     &[dir="rtl"] {
         left: auto;
-        right: -25px;
+        right: 15px;
     }
     &:before {
         content: @slick-prev-character;
@@ -271,9 +271,9 @@
 }
 
 .slick-next {
-    right: -25px;
+    right: 15px;
     &[dir="rtl"] {
-        left: -25px;
+        left: 15px;
         right: auto;
     }
     &:before {
@@ -423,9 +423,9 @@
     @media (max-width: @screen-sm) {
         top: 30%
     }
-    @media (min-width: @screen-md-min) {
-        display: none!important;
-    }
+  //  @media (min-width: @screen-md-min) {
+     //   display: none!important;
+ //   }
     .lt-ie8 & {
         display: none;
     }
@@ -442,20 +442,6 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.slick-prev {
-    left: 15px;
-    &[dir="rtl"] {
-        left: auto;
-        right: 15px;
-    }
-    &:before {
-        content: "\f053";
-        font-family: "FontAwesome";
-        &[dir="rtl"] {
-            content: "\f054";
-        }
-    }
-}
 
 .slick-dotted .slick-slider {
     margin-bottom: 30px;
