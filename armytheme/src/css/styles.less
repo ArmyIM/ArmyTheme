@@ -98,31 +98,32 @@
         text-align: center;
         font-size: 21px;
     }
-
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0,0,0,0);
-    border: 0;
-}
-
-.skip-to-content:focus {
-    padding:21px
-}
-.sr-only-focusable:active,.sr-only-focusable:focus {
-    width:auto;
-    height:auto;
-    margin:0;
-    overflow:visible;
-    clip:auto;
-    position:absolute
-}
-
-
+    
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+    
+    .skip-to-content:focus {
+        padding: 21px
+    }
+    
+    .sr-only-focusable:active,
+    .sr-only-focusable:focus {
+        width: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        clip: auto;
+        position: absolute
+    }
+    
     .body-wrap {
         background: #f1f1f1;
     }
@@ -148,8 +149,6 @@
                 .make-sm-column(8);
             }
         }
-        
-
         &.front {
             #dots-nav {
                 .clearfix;
@@ -244,6 +243,16 @@
                                 //  -ms-transform: translateY(-50%);
                                 // transform: translateY(-50%);
                             }
+                            &.featured-item {
+                                a.news-img {
+                                    display: block;
+                                    padding:0;
+                                    &:after {
+                                        content: none;
+                                        top: 0;
+                                    }
+                                }
+                            }
                         }
                         .date-display-single {
                             display: none;
@@ -287,23 +296,23 @@
             margin: 0;
         }
     }
-
-      .grid-layout {
-            ul.category-list-items {
-                .make-row;
-                li {
-                    .make-sm-column(4)!important;
-                    border: 0;
-                    .left-col {
-                        width: 100%;
-                    }
-                    .right-col {
-                        width: 100%;
-                        margin-top: @grid-gutter-width;
-                    }
+    
+    .grid-layout {
+        ul.category-list-items {
+            .make-row;
+            li {
+                .make-sm-column(4)!important;
+                border: 0;
+                .left-col {
+                    width: 100%;
+                }
+                .right-col {
+                    width: 100%;
+                    margin-top: @grid-gutter-width;
                 }
             }
         }
+    }
     
     //////////////////////////////////////////////////////////////////////////////////
     //Global Layout
