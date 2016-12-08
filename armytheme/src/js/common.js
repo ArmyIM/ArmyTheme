@@ -21,10 +21,9 @@ $(function() {
   });
 });
 
-    $('#secondary li.expanded a').addClass('disabled');
+  $('#secondary li.expanded a').addClass('disabled');
 
+  if($(".feature-img").hasClass("img-sm")) 
+     $("body").addClass("has-img-sm");
 
-    if ( $(".feature-img").hasClass("img-sm") ) {
-        $("#feature-category-img").addClass("img-sm-wrap")};
-    }
 });
