@@ -27,6 +27,8 @@
  * @ingroup views_templates
  */
 ?>
+
+
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
@@ -52,14 +54,19 @@
   <?php endif; ?>
 
   <?php if ($rows): ?>
-    <div class="view-content">
-      <?php print $rows; ?>
-    </div>
+<?php foreach ($rows as $id => $row): ?>
+  <div <?php if ($classes_array[$id]) { print ' class="' . $classes_array[$id] .'"';  } ?>>
+    <?php print $row; ?>
+  </div>
+  <?php if ($id == 0 || $id == 3): ?>custom code after third row<?php endif; ?>
+<?php endforeach; ?>
+
   <?php elseif ($empty): ?>
     <div class="view-empty">
       <?php print $empty; ?>
     </div>
   <?php endif; ?>
+
 
   <?php if ($pager): ?>
     <?php print $pager; ?>
@@ -86,6 +93,6 @@
       <?php print $feed_icon; ?>
     </div>
   <?php endif; ?>
-category grid
+
 </div><?php /* class view */ ?>
 
