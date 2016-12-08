@@ -72,8 +72,6 @@
 @import "less/fontawesome/stacked.less";
 @import "less/fontawesome/icons.less";
 //  @import "less/fontawesome/screen-reader.less";
-
-
 @h1-mobile: 26px;
 .inline-block() {
     display: inline-block;
@@ -300,10 +298,16 @@ body {
     }
 }
 
+.gallery {
+    ul {
+        .list-unstyled;
+    }
+}
+
 .grid-layout {
-  .category-grid-container{
+    .category-grid-container {
         .make-row;
-        .category-grid  {
+        .category-grid {
             .make-sm-column(4)!important;
             border: 0;
             &:first-child + li + li {
@@ -312,11 +316,8 @@ body {
                     display: block;
                 }
             }
-            ​ .left-col {
-                width: 100%;
-            }
-            .right-col {
-                width: 100%;
+            ​ .right-col {
+                width: 100%!important;
                 margin-top: @grid-gutter-width;
             }
         }
@@ -684,7 +685,6 @@ body {
         float: right;
         margin-left: 30px;
     }
-
 }
 
 .feature-img,
@@ -693,7 +693,6 @@ body {
     img {
         width: 100%;
     }
-    
 }
 
 .top-col {
@@ -2136,7 +2135,8 @@ p.tags {
         -webkit-transition: 0.5s;
         -o-transition: 0.5s;
     }
-    &:hover,&:focus {
+    &:hover,
+    &:focus {
         background: @brand-red;
         transition: 0.5s;
         -moz-transition: 0.5s;
