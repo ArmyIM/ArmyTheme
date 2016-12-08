@@ -23,6 +23,6 @@ $(function() {
 
     $('#secondary li.expanded a').addClass('disabled');
 
-    $("#feature-category-img .img-sm").parent().addClass('img-sm-wrap');
+    $("#feature-category-img .feature-img.img-sm").parents().addClass('img-sm-wrap');
 
 });
