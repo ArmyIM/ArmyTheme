@@ -20,7 +20,7 @@ if (isset($node->field_hide_global_side_content_[LANGUAGE_NONE][0]['value']) && 
 endif;
 
 if (isset($node->field_override_with_own_side_con[LANGUAGE_NONE][0]['value']) && $node->field_override_with_own_side_con[LANGUAGE_NONE][0]['value'] == 1 ) :
-       $OverrideSideContent = 'hide-global-sidecontent';
+       $OverrideSideContent = 'override-global-sidecontent';
 endif;
 
 if (!empty($TwoSidebar)) {
@@ -79,7 +79,7 @@ if (!empty($OneSidebar)) {
   </div>
   <?php }?>
 
-  <div class="content-container <?php $OverrideSideContent; ?> <?php $HideGlobalSideContent;?> <?php print $container_class; ?>" id="container">
+  <div class="content-container <?php echo $OverrideSideContent; ?> <?php echo $HideGlobalSideContent;?> <?php print $container_class; ?>" id="container">
     <?php print $breadcrumb; ?>
     <?php print render($title_suffix); ?>
     <?php if (!empty($messages)): ?>
