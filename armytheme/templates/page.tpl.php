@@ -10,21 +10,11 @@
  * @ingroup templates
  */
 $HideRightSideContent = NULL;  
-$CategoryImageSmall = NULL;
-$HideCategoryImage = NULL;
 $OneSidebar = $page[ 'sidebar_first'];
 $TwoSidebar = $page[ 'sidebar_second'];
 
 if (isset($node->field_override_with_own_side_con[LANGUAGE_NONE][0]['value']) && $node->field_override_with_own_side_con[LANGUAGE_NONE][0]['value'] == 1 ) :
         $HideRightSideContent = 'hide-global-sidecontent';
-endif;
-
-if (isset($node->field_small_category_image[LANGUAGE_NONE][0]['value']) && $node->field_small_category_image[LANGUAGE_NONE][0]['value'] == 1 ) :
-        $CategoryImageSmall = 'category-sm-img';  
-endif;
-
-if (isset($node->field_hide_category_image[LANGUAGE_NONE][0]['value']) && $node->field_hide_category_image[LANGUAGE_NONE][0]['value'] == 1 ) :
-        $HideCategoryImage = 'hide-category-img';  
 endif;
 
 if (!empty($TwoSidebar)) {
@@ -35,14 +25,6 @@ if (!empty($OneSidebar)) {
     $OneSidebar = 'has-sidebar';
   }
 ?>
-
-
-<?php 
-
-$view = field_view_field('taxonomy_term', $term, 'field_hide_category_image'); 
-echo 'true';
-
- ?>
 
 
 
@@ -91,7 +73,7 @@ echo 'true';
   </div>
   <?php }?>
 
-  <div class="content-container <?php $HideRightSideContent;?> <?php $CategoryImageSmall; ?> <?php $HideCategoryImage; ?> <?php print $container_class; ?>" id="container">
+  <div class="content-container <?php $HideRightSideContent;?> <?php print $container_class; ?>" id="container">
     <?php print $breadcrumb; ?>
     <?php print render($title_suffix); ?>
     <?php if (!empty($messages)): ?>
