@@ -53,8 +53,10 @@
     </div>
   <?php endif; ?>
 
- 
-<?php if ($rows): ?>
+
+
+  <?php if ($rows): ?>
+
 <?php foreach ($rows as $id => $row): ?>
   <div>
     <?php print $row; ?>
@@ -62,10 +64,6 @@
   <?php if ($id == 0 || $id == 3): ?>custom code after third row<?php endif; ?>
 <?php endforeach; ?>
 
-  <?php elseif ($empty): ?>
-    <div class="view-empty">
-      <?php print $empty; ?>
-    </div>
   <?php endif; ?>
 
 

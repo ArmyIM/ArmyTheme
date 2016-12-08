@@ -22,6 +22,9 @@ $(function() {
 });
 
     $('#secondary li.expanded a').addClass('disabled');
-    if( $('#feature-category-img').hasClass('img-sm') ) { $(document.body).addClass('has-img-sm'); }
 
+
+    if ( $(".feature-img").hasClass("img-sm") ) {
+        $("#feature-category-img").addClass("img-sm-wrap")};
+    }
 });
