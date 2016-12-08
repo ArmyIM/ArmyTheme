@@ -56,7 +56,7 @@
  
 <?php if ($rows): ?>
 <?php foreach ($rows as $id => $row): ?>
-  <div <?php if ($classes_array[$id]) { print ' class="' . $classes_array[$id] .'"';  } ?>>
+  <div>
     <?php print $row; ?>
   </div>
   <?php if ($id == 0 || $id == 3): ?>custom code after third row<?php endif; ?>
