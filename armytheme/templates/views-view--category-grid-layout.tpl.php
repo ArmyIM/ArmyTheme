@@ -53,7 +53,8 @@
     </div>
   <?php endif; ?>
 
-  <?php if ($rows): ?>
+ 
+<?php if ($rows): ?>
 <?php foreach ($rows as $id => $row): ?>
   <div <?php if ($classes_array[$id]) { print ' class="' . $classes_array[$id] .'"';  } ?>>
     <?php print $row; ?>
