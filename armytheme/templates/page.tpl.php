@@ -9,12 +9,18 @@
  *
  * @ingroup templates
  */
-$HideRightSideContent = NULL;  
+$OverrideSideContent = NULL;  
+$HideGlobalSideContent = NULL;
 $OneSidebar = $page[ 'sidebar_first'];
 $TwoSidebar = $page[ 'sidebar_second'];
 
+
+if (isset($node->field_hide_global_side_content_[LANGUAGE_NONE][0]['value']) && $node->field_hide_global_side_content_[LANGUAGE_NONE][0]['value'] == 1 ) :
+        $HideGlobalSideContent = 'hide-global-sidecontent';
+endif;
+
 if (isset($node->field_override_with_own_side_con[LANGUAGE_NONE][0]['value']) && $node->field_override_with_own_side_con[LANGUAGE_NONE][0]['value'] == 1 ) :
-        $HideRightSideContent = 'hide-global-sidecontent';
+       $OverrideSideContent = 'hide-global-sidecontent';
 endif;
 
 if (!empty($TwoSidebar)) {
@@ -73,7 +79,7 @@ if (!empty($OneSidebar)) {
   </div>
   <?php }?>
 
-  <div class="content-container <?php $HideRightSideContent;?> <?php print $container_class; ?>" id="container">
+  <div class="content-container <?php $OverrideSideContent; ?> <?php $HideGlobalSideContent;?> <?php print $container_class; ?>" id="container">
     <?php print $breadcrumb; ?>
     <?php print render($title_suffix); ?>
     <?php if (!empty($messages)): ?>
