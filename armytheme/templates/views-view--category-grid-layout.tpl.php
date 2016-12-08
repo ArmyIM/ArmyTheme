@@ -86,5 +86,6 @@
       <?php print $feed_icon; ?>
     </div>
   <?php endif; ?>
-
+category grid
 </div><?php /* class view */ ?>
+
