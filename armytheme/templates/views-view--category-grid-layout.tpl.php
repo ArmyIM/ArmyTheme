@@ -55,16 +55,35 @@
 
 
 
-  <?php if ($rows): ?>
 
 <?php foreach ($rows as $id => $row): ?>
-  <div>
-    <?php print $row; ?>
-  </div>
-  <?php if ($id == 0 || $id == 3): ?>custom code after third row<?php endif; ?>
-<?php endforeach; ?>
+  <div class="<?php
+  switch ($id) {
+    case 1:
+    case 3:
+    case 4:
+    case 6:
+    case 8:
+    case 9:
 
-  <?php endif; ?>
+    //add more IDs if you have more rows than 10 in your views
+    $myclasses = 'views-row-even row';
+    break;
+    
+    default:
+      $myclasses = 'views-row-odd row';
+  }  
+
+  print $myclasses; ?>"><?php print $row; ?></div>
+  <?php
+  // print custom code after 4th row
+  if ($id == 3): ?>
+    <div class="views-row-odd row">
+      custom code goes here
+    </div>
+  <?php endif;
+  ?>
+<?php endforeach; ?>
 
 
   <?php if ($pager): ?>
