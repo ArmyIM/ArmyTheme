@@ -26,8 +26,7 @@ $(function() {
   if($(".feature-img").hasClass("img-sm")) 
      $("body").addClass("has-img-sm");
 
- $(document).ready(function(){
     $('.gallery').featherlightGallery();
-});
- 
+
+
 });
