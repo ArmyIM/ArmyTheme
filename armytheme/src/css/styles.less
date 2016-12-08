@@ -546,7 +546,7 @@ body {
             float: left;
             position: relative;
             width: 14%;
-            padding:0 7.5px;
+            padding: 0 7.5px;
             li {
                 margin-bottom: 7.5px;
             }
@@ -682,13 +682,10 @@ body {
     img {
         width: 100%;
     }
-
     &.img-sm {
-
         .make-xs-column(6);
-        float:right;
-        margin-left:30px;
-
+        float: right;
+        margin-left: 30px;
     }
 }
 
@@ -811,7 +808,7 @@ body {
     }
     li {
         .clearfix();
-        overflow:hidden;
+        overflow: hidden;
         margin-bottom: 15px;
         border-bottom: 1px solid @brand-gray-light;
         padding-bottom: 15px;
@@ -946,12 +943,15 @@ span.label-above {
 .downloads {
     .well;
     margin: 30px 0;
-    h2,h3,h4 {
-margin-top:0;
-        padding-top:0
+    h2,
+    h3,
+    h4 {
+        margin-top: 0;
+        padding-top: 0
     }
-
-    .file a {text-decoration: underline;}
+    .file a {
+        text-decoration: underline;
+    }
 }
 
 .author-info {
@@ -1552,8 +1552,9 @@ p.tags {
         .make-xs-column(3);
         padding-left: (@grid-padding * 2);
     }
-
-    .date-display-single {margin:0 0 5px 0;}
+    .date-display-single {
+        margin: 0 0 5px 0;
+    }
     h2 {
         margin: 0;
         padding: (@grid-padding * 2) @grid-padding @grid-padding @grid-padding;
@@ -2115,30 +2116,27 @@ p.tags {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    padding:10px 15px;
+    padding: 3px 5px;
     background-color: #000;
     border-radius: 0.3rem;
     z-index: 500;
     .fa {
-        color:#fff;
-        font-size:30px;
+        color: #fff;
+        font-size: 30px;
+        transition: 0.5s;
+        -moz-transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+    }
+    &:hover,&:focus {
+        background: @brand-red;
         transition: 0.5s;
         -moz-transition: 0.5s;
         -webkit-transition: 0.5s;
         -o-transition: 0.5s;
-        &:hover {
-            background: rgba(178, 178, 178, 1.0);
-            transition: 0.5s;
-            -moz-transition: 0.5s;
-            -webkit-transition: 0.5s;
-            -o-transition: 0.5s;
-        }
     }
 }
-
-
-
-
 
 .quicktabs_main {
     .left-col {

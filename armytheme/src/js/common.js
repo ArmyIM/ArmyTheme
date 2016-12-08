@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
 
-    
+
 $(function() {
   var viewPortWidth = $(window).width();
 
@@ -20,8 +20,9 @@ $(function() {
     event.preventDefault();
   });
 });
+
     $('#secondary li.expanded a').addClass('disabled');
 
-    $('.pane-army-category-feature-image .yes').parent().addClass('img-sm');
+    $("#feature-category-img .img-sm").parent().addClass('img-sm-wrap');
 
 });
