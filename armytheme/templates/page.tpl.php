@@ -132,8 +132,7 @@ if (!empty($OneSidebar)) {
   <?php if (!empty($page[ 'bottom'])): ?>
   <?php print render($page[ 'bottom']); ?>
   <?php endif; ?>
-  <a href="#0" class="scroll-to-top">
-    <div class='scroll icon'>
-    <span class="fa fa-4x fa-angle-up"></span>
-    </div>
-  </a>
+
+<a href="#" class="scrolltop">
+  <i class="fa fa-angle-up"></i>
+</a>

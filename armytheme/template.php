@@ -9,6 +9,22 @@ function armytheme_preprocess_page(&$vars, $hook)
     drupal_add_js(drupal_get_path('theme', 'armytheme') . '/dist/js/pushy.min.js', array('type' => 'file', 'scope' => 'footer'));
 }
 
+
+function armytheme_preprocess_file_entity(&$variables) {
+  if ($variables['type'] == 'image') {
+
+    // Alt Text
+    if (!empty($variables['field_media_alt_text'])) {
+      $variables['content']['file']['#alt'] = $variables['field_media_alt_text']['und'][0]['safe_value'];
+    }
+
+    // Title
+    if (!empty($variables['field_media_title'])) {
+      $variables['content']['file']['#title'] = $variables['field_media_title']['und'][0]['safe_value'];
+    }
+  }
+}
+
 function armytheme_menu_tree__primary(&$variables) {
   return '<ul class="menu nav">' . $variables['tree'] . '</ul>';
 }
