@@ -34,16 +34,18 @@ if (!empty($OneSidebar)) {
 
 
 
+<div class="mobileNavWrap">
 <nav id="mobile-nav">
   <?php print render($page[ 'mobile_header']); ?> 
 </nav>
+</div>
 
 <div id="header" role="banner" class="header">
   <div class="container <?php print $container_class; ?>">
     
     <div class="mobile-header visible-xs">
 
-    <a href="#mobile-nav"><span class="hamburger-box"><span class="hamburger-inner"></span></span></a>
+    <a class="hamburger" href="#mobile-nav"><span class="hamburger-box"><span class="hamburger-inner"></span></span></a>
 
       <a id="logo-mobile" href="<?php print $front_page; ?>">
         <img src="<?php print $logo; ?>" alt="Australian Army" />
