@@ -1,15 +1,11 @@
 jQuery(document).ready(function($) {
 
-
       $("#mobile-nav").mmenu({
-         // options
       }, {
-         // configuration
          offCanvas: {
             pageSelector: "#page"
          }
       });
-
 
 $(function() {
   var viewPortWidth = $(window).width();
