@@ -45,7 +45,7 @@ if (!empty($OneSidebar)) {
     
     <div class="mobile-header visible-xs">
 
-    <a class="hamburger" href="#mobile-nav"><span class="hamburger-box"><span class="hamburger-inner"></span></span></a>
+    <a class="hamburger" id="mobile-nav-btn" href="#mobile-nav"><span class="hamburger-box"><span class="hamburger-inner"></span></span></a>
 
       <a id="logo-mobile" href="<?php print $front_page; ?>">
         <img src="<?php print $logo; ?>" alt="Australian Army" />

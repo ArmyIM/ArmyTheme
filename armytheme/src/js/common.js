@@ -29,7 +29,25 @@ $(function() {
     $('.gallery').featherlightGallery();
 
 
-      $("#mobile-nav").mmenu();
+    $('#mobile-nav').mmenu({
+        extensions: ["effect-menu-slide", "effect-listitems-slide"],
+        slidingSubmenus: true,
+        toggleText: '<span class="sr-only">toggle submenu</span>',
+    },
+
+     {
+         offCanvas:
+          {
+              pageSelector: "#page"
+          }
+
+     });
+
+    $("#mobile-nav-btn").click(function () {
+        $("#mobile-nav").data("mmenu").close();
+
+    });
+
 
 });
 
