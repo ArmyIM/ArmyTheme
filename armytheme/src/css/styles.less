@@ -268,8 +268,16 @@ body {
                 }
             }
             &.hide-global-sidecontent {
-                
+                .panel-2col-stacked {
+                    .left-col {
+                        .make-xs-column(12);
+                    }
+                    .right-col {
+                        display: none
+                    }
+                }
             }
+            
             &.override-global-sidecontent {
                 .panel-2col-stacked {
                     .left-col {
@@ -302,11 +310,16 @@ body {
 }
 
 .gallery {
+    .make-row;
     ul {
         .list-unstyled;
         li {
             .make-xs-column(12);
             .make-sm-column(4);
+            a {
+                display: block;
+                margin-bottom: 15px;
+            }
         }
     }
 }
