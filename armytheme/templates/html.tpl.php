@@ -31,14 +31,14 @@
     <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     </div>
 <![endif]-->
-
+<div id="my-page">
   <a class="skip-to-content sr-only sr-only-focusable" href="#main-content">Skip to main content</a>
   <a class="skip-to-content sr-only sr-only-focusable hidden-xs" href="#main-nav">Skip to main navigation</a>
   <a class="skip-to-content sr-only sr-only-focusable" href="#edit-search-block-form--2">Skip to search input</a>
-
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
-
+</div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-584a8b48b7cba381"></script>
 </body>
 </html>
