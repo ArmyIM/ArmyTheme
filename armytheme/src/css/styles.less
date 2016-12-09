@@ -374,19 +374,7 @@ body {
         .lt-ie8 & {
             .make-xs-column(4);
         }
-        .front & {
-            @media (max-width: @screen-xs-max) {
-                .field.field-type-image {
-                    height: 100px;
-                    overflow: hidden;
-                    position: relative;
-                    img {
-                        position: absolute;
-                        top: -60%
-                    }
-                }
-            }
-        }
+     
     }
     .middle-col {
         padding: @grid-gutter-width;
@@ -1222,7 +1210,7 @@ span.label-above {
         border: 0;
         background: lighten(@form-bg, 15%);
         .border-radius(0);
-        padding: 7px 15px;
+        padding: 6px 15px!important;
         &:focus,
         &:hover {
             background: lighten(@form-bg, 20%);
