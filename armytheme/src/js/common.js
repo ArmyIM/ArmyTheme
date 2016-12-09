@@ -1,11 +1,5 @@
 jQuery(document).ready(function($) {
 
-      $("#mobile-nav").mmenu({
-      }, {
-         offCanvas: {
-            pageSelector: "#page"
-         }
-      });
 
 $(function() {
   var viewPortWidth = $(window).width();
@@ -35,4 +29,7 @@ $(function() {
     $('.gallery').featherlightGallery();
 
 
+      $("#mobile-nav").mmenu();
+
 });
+
