@@ -1,12 +1,3 @@
- alert("HELLO");
-
- var gallery = document.getElementsByClassName('gallery');
-    var mc = new Hammer(gallery);
-    mc.on("panleft panright tap press", function(ev) {
-        gallery.textContent = ev.type +" gesture detected.";
-    });
-
-
     jQuery(document).ready(function($) {
 
 
@@ -32,34 +23,34 @@
 
   $('#secondary li.expanded a').addClass('disabled');
 
-  if($(".feature-img").hasClass("img-sm")) 
-     $("body").addClass("has-img-sm");
+    if($(".feature-img").hasClass("img-sm")) 
+    $("body").addClass("has-img-sm");
 
     $('.gallery').featherlightGallery();
 
+    var $menu = $('#mobile-nav');
 
-    $('#mobile-nav').mmenu({
-        slidingSubmenus: true,
-        toggleText: '<span class="sr-only">toggle submenu</span>',
-        extensions: ["effect-menu-slide", "effect-listitems-slide"],
-        drag: {
-          page: {
-            open: true
-          }
-        },
-
-        offCanvas:
-        {
-          pageSelector: "#page"
-        }
-
-     });
-
-    $("#mobile-nav-btn").click(function () {
-    $("#mobile-nav").data("mmenu").close();
-
+    $menu.mmenu({
+    slidingSubmenus:    true,
+    classes:            'mm-dark',
+    searchfield:        true,
+    toggleText:         '<span class="sr-only">toggle submenu</span>',
+    extensions:         ["effect-menu-slide", "effect-listitems-slide"],
+    dragOpen:           true,
+    header: {
+                        add         : true,
+                        update      : true,
+                        title       : 'Navigation'
+            },
+    
     });
 
-
+              
 });
 
+
+ var gallery = document.getElementsByClassName('gallery');
+    var mc = new Hammer(gallery);
+    mc.on("panleft panright tap press", function(ev) {
+        gallery.textContent = ev.type +" gesture detected.";
+    });
