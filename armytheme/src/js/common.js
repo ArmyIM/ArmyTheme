@@ -49,6 +49,7 @@ $(function() {
 
     });
 
+alert("updated 1");
 
 });
 
