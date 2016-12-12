@@ -1,5 +1,7 @@
 jQuery(document).ready(function($) {
 
+// detect hammer on all the document
+var swipe = new Hammer(document);
 
 $(function() {
   var viewPortWidth = $(window).width();
