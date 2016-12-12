@@ -4,7 +4,10 @@
         gallery.textContent = ev.type +" gesture detected.";
     });
 
+window.alert("updated");
+
     jQuery(document).ready(function($) {
+
 
     $(function() {
       var viewPortWidth = $(window).width();
@@ -56,7 +59,6 @@
 
     });
 
-alert("updated");
 
 });
 
