@@ -1,10 +1,11 @@
-   var myElement = document.getElementsByClassName('gallery');
+ alert("HELLO");
+
+ var gallery = document.getElementsByClassName('gallery');
     var mc = new Hammer(gallery);
     mc.on("panleft panright tap press", function(ev) {
         gallery.textContent = ev.type +" gesture detected.";
     });
 
-window.alert("updated");
 
     jQuery(document).ready(function($) {
 
