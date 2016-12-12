@@ -1,4 +1,10 @@
-jQuery(document).ready(function($) {
+   var myElement = document.getElementsByClassName('gallery');
+    var mc = new Hammer(gallery);
+    mc.on("panleft panright tap press", function(ev) {
+        gallery.textContent = ev.type +" gesture detected.";
+    });
+
+    jQuery(document).ready(function($) {
 
     $(function() {
       var viewPortWidth = $(window).width();
@@ -24,12 +30,6 @@ jQuery(document).ready(function($) {
 
   if($(".feature-img").hasClass("img-sm")) 
      $("body").addClass("has-img-sm");
-
-    var myElement = document.getElementsByClassName('gallery');
-    var mc = new Hammer(gallery);
-    mc.on("panleft panright tap press", function(ev) {
-        gallery.textContent = ev.type +" gesture detected.";
-    });
 
     $('.gallery').featherlightGallery();
 
