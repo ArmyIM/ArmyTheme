@@ -44,7 +44,7 @@ $(function() {
      });
 
     $("#mobile-nav-btn").click(function () {
-        $("#mobile-nav").data("mmenu").close();
+    $("#mobile-nav").data("mmenu").close();
 
     });
 
