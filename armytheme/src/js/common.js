@@ -33,7 +33,7 @@ $(function() {
         extensions: ["effect-menu-slide", "effect-listitems-slide"],
         slidingSubmenus: true,
         toggleText: '<span class="sr-only">toggle submenu</span>',
-        dragOpen: true
+        dragOpen: true,
     },
 
      {
