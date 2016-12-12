@@ -32,17 +32,20 @@ $(function() {
 
 
     $('#mobile-nav').mmenu({
-        extensions: ["effect-menu-slide", "effect-listitems-slide"],
         slidingSubmenus: true,
         toggleText: '<span class="sr-only">toggle submenu</span>',
-        dragOpen: true,
-    },
+        extensions: ["effect-menu-slide", "effect-listitems-slide"],
 
-     {
-         offCanvas:
-          {
-              pageSelector: "#page"
+        drag: {
+          page: {
+            open: true
           }
+        },
+
+        offCanvas:
+        {
+          pageSelector: "#page"
+        }
 
      });
 
