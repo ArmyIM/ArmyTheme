@@ -32,10 +32,9 @@
 
     $menu.mmenu({
     slidingSubmenus:    true,
-    classes:            'mm-dark',
     searchfield:        true,
     toggleText:         '<span class="sr-only">toggle submenu</span>',
-    extensions:         ["effect-menu-slide", "effect-listitems-slide"],
+    extensions:         ["effect-menu-slide", "effect-listitems-slide","theme-dark"],
     dragOpen:           true,
     header: {
                         add         : true,
