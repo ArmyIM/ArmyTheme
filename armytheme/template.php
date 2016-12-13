@@ -4,13 +4,6 @@ function armytheme_js_alter(&$js) {
    $js['misc/jquery.js']['data'] = 'https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js';
 }
 
-function armytheme_preprocess_page(&$vars, $hook)
-{  
-    drupal_add_js(drupal_get_path('theme', 'armytheme') . '/dist/js/scripts.min.js', array('type' => 'file', 'scope' => 'bottom_scripts'));
-}
-
-
-
 function armytheme_preprocess_file_entity(&$variables) {
   if ($variables['type'] == 'image') {
 
