@@ -6,8 +6,9 @@ function armytheme_js_alter(&$js) {
 
 function armytheme_preprocess_page(&$vars, $hook)
 {  
-    drupal_add_js(drupal_get_path('theme', 'armytheme') . '/dist/js/pushy.min.js', array('type' => 'file', 'scope' => 'footer'));
+    drupal_add_js(drupal_get_path('theme', 'armytheme') . '/dist/js/scripts.min.js', array('type' => 'file', 'scope' => 'footer'));
 }
+
 
 
 function armytheme_preprocess_file_entity(&$variables) {
