@@ -50,7 +50,7 @@ jQuery(document).ready(function($) {
     $menu.mmenu({
         slidingSubmenus:        true,
         toggleText:             '<span class="sr-only">toggle submenu</span>',
-        extensions:             ["effect-menu-slide", "effect-listitems-slide","theme-dark"],
+        extensions:             ["effect-menu-slide", "effect-listitems-slide","theme-dark","pagedim-black"],
         dragOpen:               true,
         setSelected:        
             {
@@ -61,6 +61,12 @@ jQuery(document).ready(function($) {
             {
                                 resultsPanel: true,
                                 clear: true
+            },
+
+
+        navbar: 
+            {
+                                title: 'Navigation'
             },
         navbars: 
             [
