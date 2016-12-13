@@ -47,9 +47,6 @@
         navbars: 
             [
                 {
-                               position: top
-                },
-                {
                                position: top,
                                content: ["searchfield"]
                 },
