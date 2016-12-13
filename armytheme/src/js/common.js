@@ -29,7 +29,6 @@
     $('.gallery').featherlightGallery();
 
     var $menu = $('#mobile-nav');
-
     $menu.mmenu({
         slidingSubmenus:        true,
         toggleText:             '<span class="sr-only">toggle submenu</span>',
@@ -44,18 +43,36 @@
             {
                                 resultsPanel: true,
                                 clear: true
-
             },
-     
         navbars: 
             [
                 {
                                position: top,
-                               content: [searchfield]
+                               content: ["searchfield"]
                 }
             ]
         });
-   });
+ 
+    var $icon = $("#mobile-nav-btn");
+    var API = $menu.data( "mmenu" );
+
+    $icon.on( "click", function() {
+       API.open();
+    });
+
+    API.bind( "opened", function() {
+       setTimeout(function() {
+          $icon.addClass( "is-active" );
+       }, 100);
+    });
+    API.bind( "closed", function() {
+       setTimeout(function() {
+          $icon.removeClass( "is-active" );
+       }, 100);
+    });
+
+  });
+
 
  var gallery = document.getElementsByClassName('gallery');
     var mc = new Hammer(gallery);
