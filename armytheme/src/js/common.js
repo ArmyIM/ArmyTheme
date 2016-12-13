@@ -47,16 +47,16 @@ jQuery(document).ready(function($) {
 
         navbar: 
             {
-                                title: 'Navigation'
+                                title: "Navigation"
             },
         navbars: 
             [
                 {
-                               position: top,
+                               position: "top",
                                content: ["searchfield"]
                 },
                 {
-                               position: bottom,
+                               position: "bottom",
                                content: [
                                   "<a class='fa fa-facebook' href='https://www.facebook.com/TheAustralianArmy'></a>",
                                   "<a class='fa fa-twitter' href='http://twitter.com/AustralianArmy'></a>",
