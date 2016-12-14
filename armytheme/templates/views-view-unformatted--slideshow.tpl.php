@@ -1,18 +1,9 @@
-<div id="feature-slides" style="display:none;">
-
-  <?php foreach ($rows as $id => $row): ?>
-    <div class="caption-wrap">
-      <div class="container">
-        <div class="caption">
-          <?php print $row; ?>
-        </div>
-      </div>
-    </div>
+<?php foreach ($rows as $id => $row): ?>
+  <div id="feature-slides" style="display:none;">
+    <?php print $row; ?>
+  </div>
 <?php endforeach; ?>
 
-
-
-</div>
 
 
 
