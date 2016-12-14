@@ -26,9 +26,9 @@
 <?php print $scripts; ?>
 </head> 
 <body <?php print $body_attributes; ?>>
-<!--[if lt IE 7]>
-<div class="message-outdated">
-    <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<!--[if lt IE 8]>
+<div class="message-outdated alert alert-warning">
+    <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     </div>
 <![endif]-->
 <div id="my-page">
