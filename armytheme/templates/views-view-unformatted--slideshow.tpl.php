@@ -1,8 +1,15 @@
 <div id="feature-slides" style="display:none;">
- <?php if ($rows): ?>
-      <?php print $rows; ?>
-     <?php endif; ?>
+
+  <?php foreach ($rows as $id => $row): ?>
+    <?php print $row; ?>
+<?php endforeach; ?>
+
+
+
 </div>
+
+
+
 <div id="dots-nav" class="container"></div>
 <script>
 jQuery(document).ready(function($) {
