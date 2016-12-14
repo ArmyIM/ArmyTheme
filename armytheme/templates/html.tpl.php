@@ -27,7 +27,8 @@
 </head> 
 <body <?php print $body_attributes; ?>>
 <!--[if lte IE 8]>
-<div class="message-outdated alert alert-warning">
+<div class="message-outdated alert alert-warning alert-dismissible" role="alert">
+<a class="close toc-filter-processed" data-dismiss="alert" href="#">×</a>
     <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     </div>
 <![endif]-->
