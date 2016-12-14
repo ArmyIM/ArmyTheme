@@ -15,6 +15,9 @@
         transition: all 0.2s ease-in;
         visibility: visible;
     }
+    .lt-ie8 & {
+        height: 485px;
+    }
 }
 
 @grid-padding: @grid-gutter-width/2;
@@ -371,7 +374,7 @@ body {
     .right-col-outer {
         .hidden-xs;
         .make-sm-column(3);
-          .lt-ie8 & {
+        .lt-ie8 & {
             .make-xs-column(3);
         }
     }
