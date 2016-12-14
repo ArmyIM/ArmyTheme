@@ -86,7 +86,7 @@ if (!empty($OneSidebar)) {
   </div>
   <?php }?>
 
-  <div class="content-container <?php echo $OverrideSideContent; ?> <?php echo $HideGlobalSideContent;?> <?php print $container_class; ?>" id="container">
+  <div class="content-container <?php $OverrideSideContent; ?> <?php $HideGlobalSideContent;?> <?php print $container_class; ?>" id="container">
     <?php print $breadcrumb; ?>
     <?php print render($title_suffix); ?>
     <?php if (!empty($messages)): ?>
