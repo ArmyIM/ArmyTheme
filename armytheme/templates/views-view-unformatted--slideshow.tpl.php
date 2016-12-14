@@ -1,7 +1,13 @@
 <div id="feature-slides" style="display:none;">
 
   <?php foreach ($rows as $id => $row): ?>
-    <?php print $row; ?>
+    <div class="caption-wrap">
+      <div class="container">
+        <div class="caption">
+          <?php print $row; ?>
+        </div>
+      </div>
+    </div>
 <?php endforeach; ?>
 
 
