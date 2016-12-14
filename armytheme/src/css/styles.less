@@ -17,8 +17,8 @@
     }
     .lt-ie8 & {
         height: 485px;
-        display:block!important;
-        overflow:hidden;
+        display: block!important;
+        overflow: hidden;
         text-align: center;
     }
 }
@@ -62,7 +62,6 @@
 @import "less/wells.less";
 @import "less/close.less";
 @import "less/slickslider.less";
-
 // Components w/ JavaScript
 // @import "less/modals.less";
 // @import "less/tooltip.less";
@@ -140,13 +139,15 @@ body {
     background: #f1f1f1;
 }
 
-.btn-label {
-    font-size: 0;
-    height: 1px;
-    overflow: hidden;
-    display: block;
-    display: block;
+
+
+.ie-only {
+    display: none;
+    .lt-ie8 & {
+        display: block;
+    }
 }
+
 
 body {
     position: relative;
@@ -204,6 +205,9 @@ body {
             padding-bottom: 0;
             position: relative;
             margin-top: -50px;
+            .lt-ie8 & {
+                margin-top: 0;
+            }
             .menu.nav,
             .featured-news {
                 .list-unstyled;
@@ -216,10 +220,6 @@ body {
                     min-height: 65px;
                     display: table;
                     vertical-align: middle;
-
-
-
-
                     @media (max-width: @screen-xs-max) {
                         height: 45px;
                         min-height: 45px;
@@ -312,6 +312,15 @@ body {
     }
 }
 
+
+
+.btn-label {
+    font-size: 0;
+    height: 1px;
+    overflow: hidden;
+    display: block;
+    display: block;
+}
 .menu {
     .clearfix;
     .list-unstyled;
@@ -510,8 +519,8 @@ body {
     }
     #logo-mobile {
         position: relative;
-        display:inline-block;
-        height:50px;
+        display: inline-block;
+        height: 50px;
         line-height: 50px;
         margin-left: 5px;
         img {
@@ -781,21 +790,18 @@ body {
 .panel-2col {
     .left-col {
         .make-sm-column(4);
-
         .lt-ie8 & {
-         .make-xs-column(4);
-    }
-
+            .make-xs-column(4);
+        }
         img {
             width: 100%!important
         }
     }
     .right-col {
         .make-sm-column(8);
-            .lt-ie8 & {
-         .make-xs-column(8);
-    }
-
+        .lt-ie8 & {
+            .make-xs-column(8);
+        }
         > a {
             .inline-block();
             margin-bottom: 5px;
@@ -810,19 +816,16 @@ body {
 .bootstrap-twocol-stacked {
     .left-col {
         .make-sm-column(8);
-
-            .lt-ie8 & {
-         .make-xs-column(8);
-    }
-
+        .lt-ie8 & {
+            .make-xs-column(8);
+        }
     }
     .right-col {
         .hidden-xs;
         .make-sm-column(4);
-            .lt-ie8 & {
-         .make-xs-column(4);
-    }
-
+        .lt-ie8 & {
+            .make-xs-column(4);
+        }
     }
 }
 
