@@ -212,6 +212,10 @@ body {
                     min-height: 65px;
                     display: table;
                     vertical-align: middle;
+
+
+
+
                     @media (max-width: @screen-xs-max) {
                         height: 45px;
                         min-height: 45px;
@@ -772,12 +776,21 @@ body {
 .panel-2col {
     .left-col {
         .make-sm-column(4);
+
+        .lt-ie8 & {
+         .make-xs-column(4);
+    }
+
         img {
             width: 100%!important
         }
     }
     .right-col {
         .make-sm-column(8);
+            .lt-ie8 & {
+         .make-xs-column(8);
+    }
+
         > a {
             .inline-block();
             margin-bottom: 5px;
@@ -792,10 +805,19 @@ body {
 .bootstrap-twocol-stacked {
     .left-col {
         .make-sm-column(8);
+
+            .lt-ie8 & {
+         .make-xs-column(8);
+    }
+
     }
     .right-col {
         .hidden-xs;
         .make-sm-column(4);
+            .lt-ie8 & {
+         .make-xs-column(4);
+    }
+
     }
 }
 
