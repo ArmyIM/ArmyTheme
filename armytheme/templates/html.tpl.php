@@ -1,17 +1,4 @@
-<?php
-/**
- * @file
- * Default theme implementation to display the basic html structure of a single
- * Drupal page.
- *
- * @see bootstrap_preprocess_html()
- * @see template_preprocess()
- * @see template_preprocess_html()
- * @see template_process()
- *
- * @ingroup templates
- */
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if lt IE 7]><html class="lt-ie7" lang="en"><![endif]-->
 <!--[if IE 8]><html class="lt-ie8" lang="en"><![endif]-->
 <!--[if gt IE 8]><!-->
@@ -24,7 +11,7 @@
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
-<?php print $scripts; ?>
+  <?php print $scripts; ?>
 </head> 
 <body <?php print $body_attributes; ?>>
 <!--[if lte IE 8]>
