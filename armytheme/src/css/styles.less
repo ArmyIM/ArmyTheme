@@ -20,8 +20,9 @@
         display: block!important;
         overflow: hidden;
         text-align: center;
-
-        .slide {margin:0 auto;}
+        .slide {
+            margin: 0 auto;
+        }
     }
 }
 
@@ -141,15 +142,12 @@ body {
     background: #f1f1f1;
 }
 
-
-
 .ie-only {
     display: none;
     .lt-ie8 & {
         display: block;
     }
 }
-
 
 body {
     position: relative;
@@ -314,8 +312,6 @@ body {
     }
 }
 
-
-
 .btn-label {
     font-size: 0;
     height: 1px;
@@ -323,6 +319,7 @@ body {
     display: block;
     display: block;
 }
+
 .menu {
     .clearfix;
     .list-unstyled;
@@ -436,7 +433,16 @@ body {
         }
     }
 }
-.message-outdated {text-align: center;font-weight:bold;border:0;a {text-decoration: underline;}}
+
+.message-outdated {
+    text-align: center;
+    font-weight: bold;
+    border: 0;
+    a {
+        text-decoration: underline;
+    }
+}
+
 #main-nav {
     .inline-block();
     text-align: right;
@@ -2248,10 +2254,14 @@ p.tags {
     }
 }
 
-
 //DRUPAL WYSIWYG Editor classes
-
-.media.media-element-container {margin:0;overflow:visible;padding-bottom:15px;}
+.media {
+    &.media-element-container {
+        margin: 0;
+        overflow: visible;
+        padding-bottom: 15px;
+    }
+}
 
 @import "less/contextual.less";
 @import "less/featherlight.less";
