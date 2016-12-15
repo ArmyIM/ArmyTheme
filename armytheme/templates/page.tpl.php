@@ -1,27 +1,6 @@
 <?php
-/**
- * @see bootstrap_preprocess_page()
- * @see template_preprocess()
- * @see template_preprocess_page()
- * @see bootstrap_process_page()
- * @see template_process()
- * @see html.tpl.php
- *
- * @ingroup templates
- */
-$OverrideSideContent = NULL;  
-$HideGlobalSideContent = NULL;
 $OneSidebar = $page[ 'sidebar_first'];
 $TwoSidebar = $page[ 'sidebar_second'];
-
-
-if (isset($node->field_hide_global_side_content_[LANGUAGE_NONE][0]['value']) && $node->field_hide_global_side_content_[LANGUAGE_NONE][0]['value'] == 1 ) :
-        $HideGlobalSideContent = 'hide-global-sidecontent';
-endif;
-
-if (isset($node->field_override_with_own_side_con[LANGUAGE_NONE][0]['value']) && $node->field_override_with_own_side_con[LANGUAGE_NONE][0]['value'] == 1 ) :
-       $OverrideSideContent = 'override-global-sidecontent';
-endif;
 
 if (!empty($TwoSidebar)) {
     $TwoSidebar = 'has-sidebars';
@@ -31,11 +10,8 @@ if (!empty($OneSidebar)) {
     $OneSidebar = 'has-sidebar';
   }
 ?>
-
-
-
 <div class="mobileNavWrap">
-<nav id="mobile-nav">
+<nav id="mobile-nav" role="navigation">
   <?php print render($page[ 'mobile_header']); ?> 
 </nav>
 </div>
@@ -44,8 +20,6 @@ if (!empty($OneSidebar)) {
   <div class="container <?php print $container_class; ?>">
     
     <div class="mobile-header visible-xs">
-
-
     <button id="mobile-nav-btn" class="hamburger hamburger--collapse" type="button">
        <span class="hamburger-box">
           <span class="hamburger-inner"></span>
@@ -86,7 +60,7 @@ if (!empty($OneSidebar)) {
   </div>
   <?php }?>
 
-  <div class="content-container <?php print $OverrideSideContent; ?> <?php print $HideGlobalSideContent;?> <?php print $container_class; ?>" id="container">
+  <div class="content-container <?php print $container_class; ?>" id="container">
     <?php print $breadcrumb; ?>
     <?php print render($title_suffix); ?>
     <?php if (!empty($messages)): ?>
