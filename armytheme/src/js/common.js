@@ -44,11 +44,6 @@ jQuery(document).ready(function($) {
                                 clear: true
             },
 
-
-        navbar: 
-            {
-                                title: "Navigation"
-            },
         navbars: 
             [
                 {
