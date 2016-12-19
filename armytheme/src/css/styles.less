@@ -457,9 +457,7 @@ body {
         display: none;
     }    
 
-      @media (max-width: @screen-md-min) {
-        .make-row;
-    }
+
     ul.menu.nav {
         float: none!important;
         .inline-block();
@@ -493,10 +491,8 @@ body {
                     color: @brand-red;
                     background: none;
                 }
+           
                 @media (max-width: @screen-md-max) {
-                    font-size: 14px;
-                }
-                @media (max-width: @screen-md-min) {
                     font-size: 15px;
                     padding: 10px;
                 }
@@ -552,14 +548,14 @@ body {
         left: 0;
 
         @media (max-width: @screen-md-max) {
-            bottom:-9px;
+            bottom:-5px;
             img {
                 width: 200px;
             }
         }
         @media (max-width: @screen-md-min) {
             img {
-                width: 150px;
+                width: 145px;
             }
         }
         @media (max-width: @screen-xs-max) {
@@ -569,6 +565,7 @@ body {
     #top-nav {
         text-align: right;
         margin-top: 7.5px;
+        .make-xs-column(12);
         @media (max-width: @screen-xs-max) {
             display: none;
         }
