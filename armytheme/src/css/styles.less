@@ -205,6 +205,10 @@ body {
             padding-bottom: 0;
             position: relative;
             margin-top: -50px;
+
+              @media (max-width: @screen-md-min) {
+                    margin-top:0;
+              }
             .lt-ie8 & {
                 margin-top: 0;
             }
@@ -248,18 +252,7 @@ body {
                             -ms-transform: translateY(-50%);
                             transform: translateY(-50%);
                         }
-                        @media (max-width: @screen-md-min) {
-                            //    display: block;
-                            //   padding: 15px 0;
-                            //  &:after {
-                            content: none;
-                            //  }
-                        }
-                        @media (min-width: @screen-lg-min) {
-                            //  -webkit-transform: translateY(-50%);
-                            //  -ms-transform: translateY(-50%);
-                            // transform: translateY(-50%);
-                        }
+                   
                     }
                     .date-display-single {
                         display: none;
