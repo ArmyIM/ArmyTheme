@@ -495,7 +495,7 @@ body {
 
            
                 @media (max-width: @screen-md-max) {
-                    font-size: 14px;
+                    font-size: 1px;
                     padding: 10px 5px;
                 }
             }
@@ -1272,12 +1272,20 @@ span.label-above {
                 color: #fff
             }
         }
+
+         @media (max-width: @screen-md-max) {
+            height:30px
+        }
     }
     .form-control {
         .border-radius(0);
         border: 0;
         background: @form-bg;
         color: #f1f1f1;
+
+         @media (max-width: @screen-md-max) {
+height:30px;
+         }
     }
 }
 
