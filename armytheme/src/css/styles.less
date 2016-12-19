@@ -452,8 +452,13 @@ body {
     .inline-block();
     text-align: right;
     .clearfix();
+
     @media (max-width: @screen-xs-max) {
         display: none;
+    }    
+
+      @media (max-width: @screen-md-min) {
+        .make-row;
     }
     ul.menu.nav {
         float: none!important;
@@ -489,7 +494,7 @@ body {
                     background: none;
                 }
                 @media (max-width: @screen-md-max) {
-                    font-size: 16px;
+                    font-size: 14px;
                 }
                 @media (max-width: @screen-md-min) {
                     font-size: 15px;
@@ -516,7 +521,7 @@ body {
     .container {
         text-align: right;
         position: relative;
-        @media (max-width: @screen-xs-max) {
+        @media (max-width: @screen-md-min) {
             padding: 0;
             width: 100%;
         }
@@ -545,7 +550,9 @@ body {
         position: absolute;
         bottom: -3px;
         left: 0;
+
         @media (max-width: @screen-md-max) {
+            bottom:-9px;
             img {
                 width: 200px;
             }
@@ -2182,19 +2189,21 @@ p.tags {
 
 .views-exposed-form {
     .make-xs-column(12);
-    padding: 0;
     margin-bottom: 15px;
-
     .well;
     .well-sm;
-
-    .views-exposed-widgets {
-
-        padding:7.5px 15px;
-    }
+        padding: 5px 15px;
 }
 
 .view-land-power-forum-themes {
+
+
+    .views-exposed-form {
+
+        .views-widget {display:inline-block;}
+label {margin-right:5px;}
+
+    }
     .author-by {
         margin-left: 0!important
     }
