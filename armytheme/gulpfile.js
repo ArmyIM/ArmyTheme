@@ -73,4 +73,4 @@ gulp.task('minify-css', function () {
         
 });
 
-gulp.task('default', ['browser-sync']);
+gulp.task('start', ['browser-sync']);
