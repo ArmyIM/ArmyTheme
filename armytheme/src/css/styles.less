@@ -814,10 +814,11 @@ body {
             font-size: @font-size-h4;
             .link-hover();
             color: @black;
-
-            &.views-more-link {font-weight: normal;font-size:@font-size-base}
+            &.views-more-link {
+                font-weight: normal;
+                font-size: @font-size-base
+            }
         }
-
     }
 }
 
@@ -930,18 +931,13 @@ body {
     background: none;
     margin: 0;
     padding: @grid-gutter-width @grid-gutter-width 0 @grid-gutter-width;
-
-
-     display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     a {
         font-size: 12px;
         color: @black;
-
-
     }
     @media (max-width: @screen-xs-max) {
         padding-bottom: 5px;
@@ -966,6 +962,43 @@ body {
         margin: 0 5px;
     }
 }
+
+
+.field-author, 
+.field-address {
+    margin:10px 0;
+}
+
+
+
+
+.field-pub-date {
+
+}
+
+
+.field-download {
+            margin: 15px 0 5px 0;
+    img {
+        Display: none;
+    }
+    a {
+        text-decoration: underline;
+        font-weight: bold;
+
+        + a {
+            margin-left: 7.5px;
+        }
+    }
+    + em {
+        margin-bottom: 30px;
+        display: block;
+    }
+}
+
+
+
+
 
 .category-link {
     margin-top: 5px;
@@ -1621,7 +1654,8 @@ p.tags {
         }
     }
     .page-node & {
-        .date-display-single {
+        .date-display-single, 
+        .item-tags {
             margin: 0 0 10px 0;
         }
     }
@@ -1725,7 +1759,8 @@ p.tags {
             }
             &.menu-mlid-1527,
             &.menu-mlid-1116,
-            &.menu-mlid-1234 {
+            &.menu-mlid-1234,
+            &.menu-mlid-1131 {
                 ul {
                     display: none!important;
                 }
@@ -2287,25 +2322,7 @@ p.tags {
     }
 }
 
-.item-tags {
-    margin:10px 0 0 0;
-}
 
-
-.download-speech {
-
-    img {Display:none;}
-    a {
-        text-decoration: underline;
-        font-weight: bold;
-        margin: 15px 0 5px 0;
-
-        + a {margin-left:7.5px;}
-    }
-
-
-    + em {margin-bottom:15px;display:block;}
-}
 
 //DRUPAL WYSIWYG Editor classes
 .media {
