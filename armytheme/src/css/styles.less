@@ -760,20 +760,19 @@ body {
 }
 
 .bottom-col {
-    padding-top: 10px;
+    padding-top: 15px;
+    .make-xs-column(12);
+    clear: both;
     ul {
         .list-unstyled;
         padding: 0;
     }
-    .make-xs-column(12);
-    clear: both;
-    .inside {
+  
+    .page-updated {
         padding-top: 15px;
         border-top: 1px solid @brand-gray-light;
         margin: 30px 0 60px 0;
-    }
-    .page-updated {
-        float: left;
+
         span.pane-title {
             .label-inline;
             color: @gray-light;
