@@ -330,9 +330,11 @@ body {
 }
 
 .gallery {
-    .make-row;
+   
     ul {
+        .clearfix;
         .list-unstyled;
+        .row;
         li {
             .make-xs-column(12);
             .make-sm-column(4);
@@ -1071,7 +1073,9 @@ span.label-above {
 }
 
 .downloads {
-    .well;
+    overflow:hidden;    
+
+    img {display:none;}
     margin: 30px 0;
     h2,
     h3,
@@ -1081,6 +1085,10 @@ span.label-above {
     }
     .file a {
         text-decoration: underline;
+         width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
     }
 }
 
