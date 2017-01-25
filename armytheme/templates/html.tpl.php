@@ -12,6 +12,9 @@
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
+  <!--[if lt IE 9]>
+  <link rel="stylesheet" type="text/css" href="dist/css/ie8.min.css" />
+  <![endif]-->
 </head> 
 <body <?php print $body_attributes; ?>>
 <!--[if lte IE 8]>
