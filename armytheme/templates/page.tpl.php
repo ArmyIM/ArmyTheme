@@ -71,7 +71,7 @@ if (!empty($OneSidebar)) {
     <?php endif; ?>
 
     <?php if (!empty($page[ 'sidebar_first'])): ?>
-    <div id="secondary" class="aside" role="complementary">
+    <div id="secondary">
       <?php print render($page[ 'sidebar_first']); ?>
     </div>
     <?php endif; ?>
