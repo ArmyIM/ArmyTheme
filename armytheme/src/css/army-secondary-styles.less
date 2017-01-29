@@ -1,22 +1,7 @@
-//featherlight gallery container
-
-.gallery {
-   
-    ul {
-        .clearfix;
-        .list-unstyled;
-        .row;
-        li {
-            .make-xs-column(12);
-            .make-sm-column(4);
-            a {
-                display: block;
-                margin-bottom: 15px;
-            }
-        }
-    }
-}
-
+@grid-padding: @grid-gutter-width/2;
+// Core variables and mixins
+@import "less/variables.less";
+@import "less/mixins.less";
 
 .hamburger {
     padding: 15px 15px;

@@ -523,14 +523,14 @@ body {
 #main-content {
     &.has-sidebar {
         .make-sm-column(9);
-        .lt-ie8 & {
+        .lt-ie8 &, .ie9 & {
             .make-xs-column(9);
         }
         padding:0;
     }
     &.has-sidebars {
         .make-sm-column(6);
-        .lt-ie8 & {
+        .lt-ie8 &, .ie9 & {
             .make-xs-column(6);
         }
     }
@@ -2176,3 +2176,23 @@ p.tags {
     }
 }
 
+
+
+//featherlight gallery container
+
+.gallery {
+   
+    ul {
+        .clearfix();
+        .list-unstyled;
+        .row;
+        li {
+            .make-xs-column(12);
+            .make-sm-column(4);
+            a {
+                display: block;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
