@@ -404,7 +404,7 @@ body {
 #secondary {
     .hidden-xs;
     .make-sm-column(3);
-    .lt-ie8 & {
+    .lt-ie8 &, .ie9 & {
         .make-xs-column(3);
         padding-left: (@grid-padding * 2);
     }

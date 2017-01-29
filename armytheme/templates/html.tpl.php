@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <!--[if lt IE 7]><html class="lt-ie7" lang="en"><![endif]-->
 <!--[if IE 8]><html class="lt-ie8" lang="en"><![endif]-->
-<!--[if gt IE 8]><!-->
-<html lang="en">
-<!--<![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> 
+<html class="no-js" lang="en"> 
+<!--<![endif]--> 
 <head>
   <link rel="profile" href="<?php print $grddl_profile; ?>" />
   <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
@@ -12,9 +13,6 @@
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
-  <!--[if lt IE 9]>
-  <link rel="stylesheet" type="text/css" href="dist/css/ie8.min.css" />
-  <![endif]-->
 </head> 
 <body <?php print $body_attributes; ?>>
 <!--[if lte IE 8]>
