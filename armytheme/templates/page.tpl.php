@@ -120,4 +120,5 @@ if (!empty($OneSidebar)) {
 
 <a href="#" class="scrolltop">
   <i class="fa fa-angle-up"></i>
+  <span class="ie-only">Back to top</span>
 </a>
