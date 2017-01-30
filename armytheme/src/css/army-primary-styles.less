@@ -155,7 +155,7 @@ body {
     }
     &.front {
         #dots-nav {
-            .clearfix;
+            .clearfix();
             position: relative;
             top: -60px;
             text-align: right;
@@ -204,7 +204,7 @@ body {
             }
             .menu.nav,
             .featured-news {
-                .list-unstyled;
+        .list-unstyled();
                 margin: 0!important;
                 li {
                     border-bottom: 1px solid @brand-gray-light;
@@ -354,7 +354,7 @@ body {
     ul {
         .inline-block();
         vertical-align: middle;
-        .list-unstyled;
+        .list-unstyled();
         li {
             .inline-block();
             margin-right: 15px;
@@ -472,7 +472,7 @@ body {
                 }
             }
             ul {
-                .list-unstyled;
+        .list-unstyled();
                 padding: 0;
                 li {
                     a {
@@ -599,7 +599,7 @@ body {
         }
     }
     .region-sidebar-second {
-        .widget-dark;
+        .widget-dark();
         .views-row {
             article {
                 margin: 0;
@@ -631,7 +631,7 @@ body {
         padding: 15px 0;
     }
     ul {
-        .list-unstyled
+        .list-unstyled();
     }
     ul.menu.nav {
         .hidden-xs;
@@ -712,12 +712,12 @@ body {
 }
 
 .menu {
-    .clearfix;
-    .list-unstyled;
+    .clearfix();
+        .list-unstyled();
     padding: 0;
     margin: 0;
     ul {
-        .list-unstyled;
+        .list-unstyled();
         padding: 0;
         margin: 0;
     }
@@ -808,7 +808,7 @@ body {
                 padding: 0;
             }
             .inside {
-                .widget-dark;
+                .widget-dark();
                 padding: 0;
             }
         }
@@ -933,7 +933,7 @@ body {
     }
     .search-results {
         .clearfix();
-        .list-unstyled;
+        .list-unstyled();
         li {
             padding: 20px 0;
         }
@@ -969,7 +969,7 @@ body {
 
 .feature-img,
 .img-feature {
-    .img-responsive;
+    .img-responsive();
     margin-bottom: 20px;
     img {
         width: 100%;
@@ -998,7 +998,7 @@ body {
     }
     ul,
     ol {
-        .list-unstyled;
+        .list-unstyled();
     }
     li {
         .clearfix();
@@ -1075,7 +1075,7 @@ body {
         .make-xs-column(12);
         clear: both;
         ul {
-            .list-unstyled;
+        .list-unstyled();
             padding: 0;
         }
         .page-updated {
@@ -1337,7 +1337,7 @@ span.label-above {
 
 .alert {
     ul {
-        .list-unstyled;
+        .list-unstyled();
         margin-left: 0;
         padding-left: 0;
         padding-left: 0;
@@ -1358,7 +1358,8 @@ span.label-above {
 
 .widget-dark {
     .clearfix();
-    #gradient.vertical-black;
+    background:@brand-black;
+    #gradient.vertical-black();
     padding: 20px;
     .border-radius(2px);
     color: @brand-gray;
@@ -1367,7 +1368,7 @@ span.label-above {
         padding: 0 0 15px 0;
     }
     img {
-        .img-responsive;
+        .img-responsive();
     }
     .date-display-single {
         color: @gray-lighter;
@@ -1383,7 +1384,8 @@ span.label-above {
 }
 
 .pane-bean-follow-us {
-    #gradient.vertical-black-2;
+     background:@brand-black;
+    #gradient.vertical-black-2();
     padding: 15px;
     .author-by {
         margin-left: 0;
@@ -1399,7 +1401,7 @@ span.label-above {
         float: right;
     }
     ul {
-        .list-unstyled;
+        .list-unstyled();
         margin: 0;
         li {
             .inline-block();
@@ -1456,7 +1458,7 @@ span.label-above {
 
 .list-items {
     .clearfix();
-    .list-unstyled;
+        .list-unstyled();
     li {
         min-height: 125px;
         padding: 15px 0;
@@ -1552,7 +1554,7 @@ span.label-above {
                 margin: 0;
             }
             img {
-                .img-responsive;
+                .img-responsive();
                 width: 100%;
                 height: auto
             }
@@ -1656,7 +1658,7 @@ p.tags {
             width: 150px;
             height: auto;
             img {
-                .img-responsive;
+                .img-responsive();
             }
         }
     }
@@ -1693,14 +1695,14 @@ p.tags {
             width: 100%;
             position: absolute;
             @media (min-width: @screen-sm-min) {
-                .img-responsive;
-                position: relative
+                .img-responsive();
+                position: relative;
             }
         }
         &.banner-img-feature {
             width: 100%!important;
             img {
-                .img-responsive;
+                 .img-responsive();
                 width: 100%!important;
             }
         }
@@ -1779,7 +1781,7 @@ p.tags {
         border: 0!important;
         .fade-hover();
         img {
-            .img-responsive;
+            .img-responsive();
             width: 100%!important;
             height: 100%!important;
             .lt-ie8 & {
@@ -1801,7 +1803,7 @@ p.tags {
     }
     ul,
     ol {
-        .list-unstyled;
+        .list-unstyled();
     }
     ol {
         .clearfix();
@@ -1875,7 +1877,7 @@ p.tags {
     ol,
     ul {
         .clearfix();
-        .list-unstyled;
+        .list-unstyled();
         margin: 0;
     }
     li {
@@ -1988,8 +1990,8 @@ p.tags {
     }
     ul {
         margin-top: 14px;
-        .list-unstyled;
-        .list-inline;
+        .list-unstyled();
+        .list-inline();
         list-style-type: disc;
         @media (max-width: @screen-xs-max) {
             text-align: center;
@@ -2038,7 +2040,7 @@ p.tags {
 .advert {
     width: 100%;
     img {
-        .img-responsive;
+         .img-responsive();
         width: 100%!important;
         height: auto;
     }
@@ -2130,7 +2132,7 @@ p.tags {
     .col-sm-8 {
         .make-xs-column(4)!important;
         img {
-            .img-responsive;
+            .img-responsive();
         }
     }
 }
@@ -2139,7 +2141,7 @@ p.tags {
 .gallery {
     ul {
         .clearfix();
-        .list-unstyled;
+        .list-unstyled();
         .row;
         li {
             .make-xs-column(12);
