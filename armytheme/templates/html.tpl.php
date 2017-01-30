@@ -6,8 +6,8 @@
 <html class="no-js" lang="en"> 
 <!--<![endif]--> 
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=9">
   <link rel="profile" href="<?php print $grddl_profile; ?>" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9">
   <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
   <meta name="google-site-verification" content="ZpVNR_Du6b6Mv84i3z-mWc_HexmoHJMBOqHuV6ozMS4" />
   <?php print $head; ?>
