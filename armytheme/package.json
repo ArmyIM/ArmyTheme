@@ -4,8 +4,7 @@
   "description": "Gulping files",
   "main": " ",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp": "gulp"
+    "install": "echo 'https://www.drupal.org/node/2393605' > node_modules/.scanignore"
   },
   "author": "Army",
   "devDependencies": {
@@ -13,6 +12,7 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^2.1.0",
     "gulp-concat": "^2.4.3",
+    "gulp-css-selector-limit": "^0.1.2",
     "gulp-cssmin": "^0.1.6",
     "gulp-jshint": "^1.9.2",
     "gulp-less": "^3.0.1",
@@ -22,9 +22,5 @@
     "gulp-uglify": "^1.1.0",
     "gulp-util": "^3.0.3",
     "jshint-stylish": "^1.0.0"
-  },
-
-  "scripts": {
-  "install": "echo 'https://www.drupal.org/node/2393605' > node_modules/.scanignore"
-}
+  }
 }

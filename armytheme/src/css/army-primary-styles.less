@@ -401,7 +401,7 @@ body {
 #secondary {
     .hidden-xs;
     .make-sm-column(3);
-    .lt-ie8 &, .ie9 & {
+    .lt-ie8 & {
         .make-xs-column(3);
         padding-left: (@grid-padding * 2);
     }
@@ -523,14 +523,14 @@ body {
 #main-content {
     &.has-sidebar {
         .make-sm-column(9);
-        .lt-ie8 &, .ie9 & {
+        .lt-ie8 & {
             .make-xs-column(9);
         }
         padding:0;
     }
     &.has-sidebars {
         .make-sm-column(6);
-        .lt-ie8 &, .ie9 & {
+        .lt-ie8 & {
             .make-xs-column(6);
         }
     }
@@ -684,6 +684,8 @@ body {
         }
     }
 }
+
+
 
 #tertiary {
     li {
@@ -2196,3 +2198,183 @@ p.tags {
         }
     }
 }
+
+
+.hamburger {
+    padding: 15px 15px;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: @brand-red;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+    vertical-align: middle;
+}
+
+.hamburger:hover {
+    opacity: 0.7;
+}
+
+.hamburger-box {
+    width: 40px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+}
+
+.hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: #000;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+    content: "";
+    display: block;
+}
+
+.hamburger-inner::before {
+    top: -10px;
+}
+
+.hamburger-inner::after {
+    bottom: -10px;
+}
+
+
+/*
+   * Collapse
+   */
+
+.hamburger--collapse .hamburger-inner {
+    top: auto;
+    bottom: 0;
+    // transition-duration: 0.15s;
+    // transition-delay: 0.15s;
+    transition-duration: 0.10s;
+    transition-delay: 0.10s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--collapse .hamburger-inner::after {
+    top: -20px;
+    transition: top 0.3s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
+}
+
+.hamburger--collapse .hamburger-inner::before {
+    transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--collapse.is-active .hamburger-inner {
+    transform: translate3d(0, -10px, 0) rotate(-45deg);
+    transition-delay: 0.32s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburger--collapse.is-active .hamburger-inner::after {
+    top: 0;
+    opacity: 0;
+    transition: top 0.3s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.27s linear;
+}
+
+.hamburger--collapse.is-active .hamburger-inner::before {
+    top: 0;
+    transform: rotate(-90deg);
+    transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+
+
+
+#dimmer {
+    background-color: transparent;
+    transition: background .25s ease-in-out;
+    -moz-transition: background .25s ease-in-out;
+    -webkit-transition: background .25s ease-in-out;
+    > div {
+        opacity: 1;
+        transition: opacity .25s ease-in-out;
+        -moz-transition: opacity .25s ease-in-out;
+        -webkit-transition: opacity .25s ease-in-out;
+    }
+}
+
+.timeline-Widget {
+    background: red;
+    h1.timeline-Header-title {
+        font-weight: bold!important;
+        font-size: 14px!important;
+    }
+}
+
+.scrolltop {
+    display: none;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 3px 7.5px;
+    background-color: #000;
+    border-radius: 0.3rem;
+    z-index: 500;
+    .fa {
+        color: #fff;
+        font-size: 30px;
+        transition: 0.5s;
+        -moz-transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+    }
+    &:hover,
+    &:focus {
+        background: @brand-red;
+        transition: 0.5s;
+        -moz-transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+    }
+}
+
+.quicktabs_main {
+    .left-col {
+        .make-xs-column(12);
+    }
+}
+
+
+
+//DRUPAL WYSIWYG Editor classes
+.media {
+    &.media-element-container {
+        margin: 0;
+        overflow: visible;
+        padding-bottom: 15px;
+    }
+}
+
+
+
+
+@import "less/contextual.less";
+@import "less/featherlight.less";

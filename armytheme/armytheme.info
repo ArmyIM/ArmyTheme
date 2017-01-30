@@ -29,8 +29,6 @@ plugins[panels][layouts] = layouts
 
 
 stylesheets[all][] = dist/css/army-primary-styles.min.css
-stylesheets[all][] = dist/css/army-secondary-styles.min.css
-
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Scripts

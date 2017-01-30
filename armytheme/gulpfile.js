@@ -5,6 +5,13 @@ var gulp = require('gulp'),
 var browserSync = require('browser-sync').create();
 var reload      = browserSync.reload;
 
+
+
+var gulp = require('gulp'),
+cssSelectorLimit = require('gulp-css-selector-limit');
+
+
+
 gulp.task('default', ['watch']);
 
 gulp.task('browser-sync', function() {
@@ -66,6 +73,9 @@ gulp.task('minify-css', function () {
                 ],
             cascade: false
         }))
+        .pipe(cssSelectorLimit())
+        .pipe(cssSelectorLimit.reporter('default'))
+        .pipe(cssSelectorLimit.reporter('fail'))
         .pipe(plugins.cssmin())
         .pipe(plugins.rename({ suffix: '.min' }))
         .pipe(gulp.dest('dist/css')).on('error', gutil.log)
