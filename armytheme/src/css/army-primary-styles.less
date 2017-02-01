@@ -1070,8 +1070,10 @@ body {
         .make-xs-column(12);
         clear: both;
         ul {
-            .list-unstyled();
+            margin: 0;
             padding: 0;
+            list-style: none;
+            list-style-type: none;
         }
         .page-updated {
             padding-top: 15px;
@@ -2301,14 +2303,21 @@ p.tags {
         -o-transition: 0.5s;
     }
 
+    span {
+        display:none;
 
-    .ie-only {
-        font-size:14px;
+
+    .lt-ie8 &, .ie9 {
+     font-size:14px;
         display:block;
         text-align: center;
         font-weight: bold;
         font-family: @font-family-base;
+
     }
+    }
+
+  
 }
 
 .quicktabs_main {
