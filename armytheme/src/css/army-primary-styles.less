@@ -129,7 +129,8 @@ body {
 
 .ie-only {
     display: none;
-    .lt-ie8 &, .ie9 {
+    .lt-ie8 &,
+    .ie9 {
         display: block;
     }
 }
@@ -770,16 +771,14 @@ body {
             .make-xs-column(3);
         }
     }
-
-.bottom-col {
-    clear:both;
-    padding-top:30px;
-    .clearfix();
-
-    ul {.list-unstyled();
+    .bottom-col {
+        clear: both;
+        padding-top: 30px;
+        .clearfix();
+        ul {
+            .list-unstyled();
+        }
     }
-}
-
     .left-col,
     .left-col,
     .midleft-col,
@@ -886,9 +885,14 @@ body {
 //////////////////////////////////////////////////////////////////////////////////
 ///SEARCH///
 //////////////////////////////////////////////////////////////////////////////////
-.fa-search:before {
-    content: "\f002";
-    font-family: 'FontAwesome';
+.fa-search {
+    &:before {
+        content: "\f002";
+        font-family: 'FontAwesome';
+    }
+    .lt-ie8 &,.ie9 & {
+        display: none
+    }
 }
 
 #search-block-form {
@@ -1050,14 +1054,11 @@ body {
 
 .bootstrap-onecol,
 .bootstrap-twocol-stacked {
-
-
     .bottom-col {
         padding-top: 15px;
         .make-xs-column(12);
         clear: both;
         .clearfix();
-
         ul {
             margin: 0;
             padding: 0;
@@ -1114,8 +1115,6 @@ body {
             margin: 0;
         }
     }
-
-
 }
 
 .category-parent {
@@ -1177,7 +1176,7 @@ body {
     margin: 0;
     padding: @grid-gutter-width @grid-gutter-width 0 @grid-gutter-width;
     display: inline-block;
-    width:100%;
+    width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1514,15 +1513,14 @@ span.label-above {
     }
 }
 
-
-
 .quicktabs-wrapper {
-
     .make-xs-column(12);
-
-    .quicktabs_main {padding:15px 0}
-
-    img {margin-bottom:15px;}
+    .quicktabs_main {
+        padding: 15px 0
+    }
+    img {
+        margin-bottom: 15px;
+    }
 }
 
 .quicktabs-tabs {
@@ -1534,9 +1532,9 @@ span.label-above {
             padding: 5px 15px;
             font-weight: bold;
             font-size: 16px;
-
-            &:hover,&:focus {
-                text-decoration:none;
+            &:hover,
+            &:focus {
+                text-decoration: none;
             }
         }
     }
@@ -2338,22 +2336,17 @@ p.tags {
         -webkit-transition: 0.5s;
         -o-transition: 0.5s;
     }
-
     span {
-        display:none;
-
-
-    .lt-ie8 &, .ie9 {
-     font-size:14px;
-        display:block;
-        text-align: center;
-        font-weight: bold;
-        font-family: @font-family-base;
-
+        display: none;
+        .lt-ie8 &,
+        .ie9 {
+            font-size: 14px;
+            display: block;
+            text-align: center;
+            font-weight: bold;
+            font-family: @font-family-base;
+        }
     }
-    }
-
-  
 }
 
 .quicktabs_main {
