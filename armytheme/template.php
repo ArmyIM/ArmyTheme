@@ -76,4 +76,3 @@ function armytheme_preprocess_field(&$variables) {
     }
   }
 }
-?>
