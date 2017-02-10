@@ -76,7 +76,7 @@ if (!empty($OneSidebar)) {
     </div>
     <?php endif; ?>
 
-    <div id="main-content" class="<?php print $OneSidebar ?> <?php print $TwoSidebar ?>">
+    <div id="main-content" class="<?php if (!empty($OneSidebar)) { print $OneSidebar; } ?> <?php if (!empty($TwoSidebar)) { print $TwoSidebar; } ?>">
         <?php print render($title_prefix); ?>
           <?php if (!empty($title)): ?>
             <h1 class="page-header">
