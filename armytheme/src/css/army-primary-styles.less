@@ -890,7 +890,8 @@ body {
         content: "\f002";
         font-family: 'FontAwesome';
     }
-    .lt-ie8 &,.ie9 & {
+    .lt-ie8 &,
+    .ie9 & {
         display: none
     }
 }
@@ -1086,31 +1087,20 @@ body {
             margin: 0!important;
         }
     }
-
-    .middle-col {  
-
+    .middle-col {
         .make-xs-column(12);
-
     }
-
     .pull-right {
-
         .make-sm-column(6);
-           margin: 0 0 15px 15px!important;
+        margin: 0 0 15px 15px!important;
         padding: 0;
-
     }
     .pull-left {
-
         .make-sm-column(6);
         margin: 0 15px 15px 0!important;
         padding: 0;
-
     }
 }
-
-
-
 
 //.panel-2col-stacked,
 .bootstrap-twocol-stacked {
@@ -2388,8 +2378,17 @@ p.tags {
     }
 }
 
-
-
+#mc_embed_signup {
+    .input-group {
+        display:block;
+        .make-xs-column(12)!important;
+        .make-sm-column(9)!important;
+        .make-md-column(10)!important;
+    }
+    .form-control {
+        background: #fff;
+    }
+}
 
 // Fonts
 @import "less/fontawesome/variables.less";
