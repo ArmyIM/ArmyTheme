@@ -795,7 +795,17 @@ body {
     .right-col {
         .make-xs-column(12);
     }
+
     .front & {
+        .field-name-field-featurepageimage,
+        .news-img {
+            a {
+                display: block
+            }
+            .lt-ie8 & {
+                height:200px;
+            }
+        }
         .make-xs-column(12);
         background: #fff;
         @media (min-width: @screen-sm-min) {
@@ -2380,7 +2390,7 @@ p.tags {
 
 #mc_embed_signup {
     .input-group {
-        display:block;
+        display: block;
         .make-xs-column(12)!important;
         .make-sm-column(9)!important;
         .make-md-column(10)!important;
